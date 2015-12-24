@@ -1,0 +1,977 @@
+# German translations for PACKAGE package.
+# Copyright (C) 2010 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Daniel Richter <danielrichter2007@web.de>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 2.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-04-16 20:28+0200\n"
+"PO-Revision-Date: 2013-01-19 19:05+0000\n"
+"Last-Translator: Daniel Richter <danielrichter2007@web.de>\n"
+"Language-Team: German\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2013-11-13 17:48+0000\n"
+"X-Generator: Launchpad (build 16820)\n"
+
+#: src/Controller/MainControllerImpl.cpp:673
+msgid "Name the Entry"
+msgstr "Benennen Sie den Eintrag !"
+
+#: src/Controller/MainControllerImpl.cpp:755
+msgid "cannot move this entry"
+msgstr "Dieser Eintrag kann nicht verschoben werden."
+
+#: src/Controller/MainControllerImpl.cpp:848
+msgid "Configuration has been saved"
+msgstr "Die Konfiguration wurde gespeichert"
+
+#: src/Controller/MainControllerImpl.cpp:853
+msgid "updating configuration"
+msgstr "Konfiguration wird gespeichert"
+
+#: src/main/gtk-client.cpp:251
+msgid "Linux"
+msgstr "Linux"
+
+#: src/main/gtk-client.cpp:252
+msgid "Linux-ISO"
+msgstr "Linux-ISO"
+
+#: src/main/gtk-client.cpp:253
+msgid "Chainloader"
+msgstr "Chainloader (Lädt andere Bootloader)"
+
+#: src/main/gtk-client.cpp:254
+msgid "Memtest"
+msgstr "Speichertest"
+
+#: src/View/Gtk/About.cpp:36
+msgid ""
+"Grub Customizer is a graphical interface to configure the grub2/burg settings"
+msgstr ""
+"Grub Customizer ist eine grafische Benutzeroberfläche, um die GRUB 2 / BURG-"
+"Einstellungen zu konfigurieren."
+
+#: src/View/Gtk/EntryEditor.cpp:22 src/View/Gtk/EnvEditor.cpp:23
+msgid "_Type:"
+msgstr "_Typ:"
+
+#: src/View/Gtk/EntryEditor.cpp:28
+msgid "Entry editor"
+msgstr "Bootmenüeintrag bearbeiten"
+
+#: src/View/Gtk/EntryEditor.cpp:34
+msgid "Options"
+msgstr "Optionen"
+
+#: src/View/Gtk/EntryEditor.cpp:35
+msgid "Source"
+msgstr "Quellcode"
+
+#: src/View/Gtk/EntryEditor.cpp:54
+msgid "_Partition"
+msgstr "_Partition"
+
+#: src/View/Gtk/EntryEditor.cpp:56
+msgid "_Initial ramdisk"
+msgstr "_Initiale RAMdisk"
+
+#: src/View/Gtk/EntryEditor.cpp:58
+msgid "_Linux image"
+msgstr "_Linux-Bootimage"
+
+#: src/View/Gtk/EntryEditor.cpp:60
+msgid "_Memtest image"
+msgstr "_Memtest-Bootimage"
+
+#: src/View/Gtk/EntryEditor.cpp:62
+msgid "Path to iso file"
+msgstr "Pfad zur ISO-Datei"
+
+#: src/View/Gtk/EntryEditor.cpp:64
+msgid "Locale"
+msgstr "Lokalisierung"
+
+#: src/View/Gtk/EntryEditor.cpp:66
+msgid "Kernel params"
+msgstr "Kernel-Parameter"
+
+#: src/View/Gtk/EntryEditor.cpp:169 src/View/Gtk/EntryEditor.cpp:175
+#: src/View/Gtk/EntryEditor.cpp:209
+msgid "Other"
+msgstr "Andere"
+
+#: src/View/Gtk/EnvEditor.cpp:22
+msgid "_Partition:"
+msgstr "_Partition"
+
+#: src/View/Gtk/EnvEditor.cpp:23
+msgid "Submountpoints:"
+msgstr "Wählen Sie alle notwendigen Mountpoints"
+
+#: src/View/Gtk/EnvEditor.cpp:24
+msgid "save this configuration"
+msgstr "Diese Konfiguration speichern"
+
+#: src/View/Gtk/EnvEditor.cpp:53
+msgid "Grub 2"
+msgstr "GRUB 2"
+
+#: src/View/Gtk/EnvEditor.cpp:54
+msgid "BURG"
+msgstr "BURG"
+
+#: src/View/Gtk/EnvEditor.cpp:210
+msgid "Mount failed!"
+msgstr "Einhängen fehlgeschlagen !"
+
+#: src/View/Gtk/EnvEditor.cpp:211
+msgid "umount failed!"
+msgstr "Aushängen fehlgeschlagen !"
+
+#: src/View/Gtk/EnvEditor.cpp:212
+msgid "This seems not to be a root file system (no fstab found)"
+msgstr "Dies scheint kein Rootdateisystem zu sein (keine fstab gefunden)"
+
+#: src/View/Gtk/EnvEditor.cpp:213
+msgid "Couldn't mount the selected partition"
+msgstr "Konnte die ausgewählte Partition nicht einhängen"
+
+#: src/View/Gtk/EnvEditor.cpp:214
+msgid "Couldn't umount the selected partition"
+msgstr "Konnte die ausgewählte Partition nicht aushängen"
+
+#: src/View/Gtk/Error.cpp:26 src/View/Gtk/Error.cpp:28
+msgid "An error occurred"
+msgstr "Es ist ein Fehler aufgetreten"
+
+#: src/View/Gtk/Error.cpp:27
+msgid ""
+"please Inform the author about this problem. The following information could "
+"be helpful:"
+msgstr ""
+"Bitte informieren Sie den Ersteller dieses Programms über das Problem. Die "
+"folgende Information könnte hilfreich sein:"
+
+#: src/View/Gtk/Error.cpp:31
+msgid "continue (risk data loss)"
+msgstr "fortfahren (Datenverlust riskieren)"
+
+#: src/View/Gtk/Installer.cpp:22
+msgid ""
+"Install the bootloader to MBR and put some\n"
+"files to the bootloaders data directory\n"
+"(if they don't already exist)."
+msgstr ""
+"Installieren Sie den Bootloader in den MBR und speichern Sie\n"
+"ein paar Dateien im Datenverzeichnis des Bootloaders.\n"
+"(wenn diese nicht schon existieren)."
+
+#: src/View/Gtk/Installer.cpp:23
+msgid "_Device: "
+msgstr "_Gerät: "
+
+#: src/View/Gtk/Installer.cpp:33
+msgid "Install to MBR"
+msgstr "In den MBR installieren"
+
+#: src/View/Gtk/Installer.cpp:50
+msgid "The bootloader has been installed successfully"
+msgstr "Der Bootloader wurde erfolgreich installiert."
+
+#: src/View/Gtk/Installer.cpp:55
+msgid "Error while installing the bootloader"
+msgstr "Fehler während der Installation des Bootloaders."
+
+#: src/View/Gtk/Installer.cpp:71
+msgid "installing the bootloader…"
+msgstr "Der Bootloader wird installiert …"
+
+#: src/View/Gtk/Installer.cpp:76
+msgid "Please type a device string!"
+msgstr "Bitte geben Sie einen Geräte-Pfad ein !"
+
+#: src/View/Gtk/Main.cpp:29
+msgid "_File"
+msgstr "_Datei"
+
+#: src/View/Gtk/Main.cpp:31
+msgid "_Edit"
+msgstr "_Bearbeiten"
+
+#: src/View/Gtk/Main.cpp:31
+msgid "_View"
+msgstr "_Ansicht"
+
+#: src/View/Gtk/Main.cpp:31
+msgid "_Help"
+msgstr "_Hilfe"
+
+#: src/View/Gtk/Main.cpp:32
+msgid "_Install to MBR …"
+msgstr "_Installiere im MBR ..."
+
+#: src/View/Gtk/Main.cpp:41
+msgid "_Show details"
+msgstr "_Details anzeigen"
+
+#: src/View/Gtk/Main.cpp:41
+msgid "Show _hidden entries"
+msgstr "_Ausgeblendete Menüeinträge anzeigen"
+
+#: src/View/Gtk/Main.cpp:42
+msgid "_Group by Script"
+msgstr "Nach Skripten gruppieren"
+
+#: src/View/Gtk/Main.cpp:42
+msgid "Show _Placeholders"
+msgstr "_Platzhalter anzeigen"
+
+#: src/View/Gtk/Main.cpp:43
+msgid "BURG found!"
+msgstr "BURG gefunden!"
+
+#: src/View/Gtk/Main.cpp:44
+msgid "advanced settings"
+msgstr "erweiterte Einstellungen"
+
+#: src/View/Gtk/Main.cpp:46
+msgid ""
+"The modifications you've done affects the visible entries. Please reload!"
+msgstr ""
+"Die vorgenommenen Einstellungen verändern das Bootmenü. Bitte neu laden!"
+
+#: src/View/Gtk/Main.cpp:47
+msgid "Script updates found. Click save to apply the changes!"
+msgstr ""
+"Einige Skipte wurden aktualisiert. Klicke speichern, um die Änderungen zu "
+"übernehmen!"
+
+#: src/View/Gtk/Main.cpp:60
+msgid "_List configuration"
+msgstr "_Bootmenü-Konfiguration"
+
+#: src/View/Gtk/Main.cpp:95
+msgid "Remove selected entries (you can restore them from trash)"
+msgstr ""
+"Ausgewählte Einträge löschen (diese können aus dem Papierkorb "
+"wiederhergestellt werden)"
+
+#: src/View/Gtk/Main.cpp:105
+msgid "Move up the selected entry or script"
+msgstr "Bewege den ausgewählten Eintrag oder das Skript nach oben"
+
+#: src/View/Gtk/Main.cpp:107
+msgid "Move down the selected entry or script"
+msgstr "Bewege den ausgewählten Eintrag oder das Skript nach unten"
+
+#: src/View/Gtk/Main.cpp:113
+msgid "remove this entry from the current submenu"
+msgstr "Diesen Eintrag aus dem Submenü herausschieben"
+
+#: src/View/Gtk/Main.cpp:116
+msgid "add this entry to a new submenu"
+msgstr "Diesen Eintrag in ein neues Submenü schieben"
+
+#: src/View/Gtk/Main.cpp:139
+msgid "Reverts the list to the default order"
+msgstr "Bringt die Liste in den Ausgangszustand zurück"
+
+#: src/View/Gtk/Main.cpp:141
+msgid "reloads the configuration. Unsaved changes will be preserved."
+msgstr ""
+"Lädt die Konfiguration neu. Ungespeicherte Anpassungen gehen dabei *nicht* "
+"verloren!"
+
+#: src/View/Gtk/Main.cpp:185
+msgid "Rename"
+msgstr "Umbenennen"
+
+#: src/View/Gtk/Main.cpp:186 src/View/Gtk/Main.cpp:187
+msgid "Move up"
+msgstr "Nach oben verschieben"
+
+#: src/View/Gtk/Main.cpp:188 src/View/Gtk/Main.cpp:189
+msgid "Move down"
+msgstr "Nach unten verschieben"
+
+#: src/View/Gtk/Main.cpp:190 src/View/Gtk/Main.cpp:191
+msgid "Remove from submenu"
+msgstr "Aus dem Untermenü entfernen"
+
+#: src/View/Gtk/Main.cpp:192 src/View/Gtk/Main.cpp:193
+msgid "Create submenu"
+msgstr "Neues Untermenü erstellen"
+
+#: src/View/Gtk/Main.cpp:208
+msgid "_Change Environment …"
+msgstr "_Umgebung wechseln"
+
+#: src/View/Gtk/Main.cpp:215
+msgid "Do you want to configure BURG instead of grub2?"
+msgstr "Möchten Sie BURG anstelle von GRUB 2 konfigurieren ?"
+
+#: src/View/Gtk/Main.cpp:281
+msgid "_General settings"
+msgstr "_Allgemeine Einstellungen"
+
+#: src/View/Gtk/Main.cpp:288
+msgid "_Appearance settings"
+msgstr "_Darstellung"
+
+#: src/View/Gtk/Main.cpp:308
+msgid "BURG Mode"
+msgstr "BURG-Modus"
+
+#: src/View/Gtk/Main.cpp:312
+msgid "Save configuration and generate a new "
+msgstr "Konfiguration speichern und eine Neue generieren : "
+
+#: src/View/Gtk/Main.cpp:339
+msgid "Are you sure?"
+msgstr "Sind Sie sicher?"
+
+#: src/View/Gtk/Main.cpp:340
+msgid "This removes all your list modifications of the bootloader menu!"
+msgstr "Dies setzt alle Anpassungen des Bootloader-Menüs zurück!"
+
+#: src/View/Gtk/Main.cpp:433
+msgid "loading configuration…"
+msgstr "Konfiguration wird geladen …"
+
+#: src/View/Gtk/Main.cpp:435
+msgid "loading script %2/%3 (%1)"
+msgstr "Lade Skript %2/%3 (%1)"
+
+#: src/View/Gtk/Main.cpp:448
+msgid "Proxy binary not found!"
+msgstr "Proxy-Binärdatei nicht gefunden !"
+
+#: src/View/Gtk/Main.cpp:449
+msgid ""
+"You will see all entries (uncustomized) when you run grub. This error accurs "
+"(in most cases), when you didn't install grub gustomizer currectly."
+msgstr ""
+"Sie werden alle Einträge (unangepasst) sehen, wenn Sie GRUB ausführen. "
+"Dieser Fehler tritt (in den meisten Fällen) dann auf, wenn Sie den Grub-"
+"Customizer nicht korrekt installiert haben."
+
+#: src/View/Gtk/Main.cpp:455
+msgid "(incoming Entries of %1, Script: %2)"
+msgstr "(hinzukommende Einträge von %1, Skript: %2)"
+
+#: src/View/Gtk/Main.cpp:457
+msgid "(incoming Entries of %1)"
+msgstr "(hinzukommende Einträge von %1)"
+
+#: src/View/Gtk/Main.cpp:459
+msgid "(incoming Entries of Script: %1)"
+msgstr "(hinzukommende Einträge des Skriptes: %1)"
+
+#: src/View/Gtk/Main.cpp:461
+msgid "(incoming Entries)"
+msgstr "(hinzukommende Einträge)"
+
+#: src/View/Gtk/Main.cpp:467
+msgid "(script code)"
+msgstr "(Script-Code)"
+
+#: src/View/Gtk/Main.cpp:469
+msgid "(script code of %1)"
+msgstr "(Script-Code von %1)"
+
+#: src/View/Gtk/Main.cpp:687
+msgid ""
+"Removing Script Code can cause problems when trying to boot entries relying "
+"on it. Are you sure you want to do it anyway?"
+msgstr ""
+"Das Entfernen von Skript-Code kann dazu führen, dass einige Menüeinträge "
+"nicht mehr korrekt funktionieren. Soll die Aktion trotzdem ausgeführt werden?"
+
+#: src/View/Gtk/Main.cpp:696
+msgid ""
+"You're trying to remove an entry of the currently running system. Make sure "
+"there are other working entries of this system!\n"
+"If you just want to remove old kernels: The better way is uninstalling them "
+"instead of just hiding them in boot menu."
+msgstr ""
+"Sie versuchen gerade, einen Menü-Eintrag des momentan laufenden Systems zu "
+"entfernen. Bitte stellen Sie unbedingt sicher, dass es Alternativ-Einträge "
+"gibt, die funktionieren!\n"
+"Falls Sie einfach nur alte Kernel entfernen möchten: Grundsätzlich ist es "
+"besser, diese komplett zu deinstallieren, statt einfach nur deren Bootmenü-"
+"Einträge auszublenden."
+
+#: src/View/Gtk/Main.cpp:810 src/View/Gtk/Element/List.h:132
+msgid "menuentry"
+msgstr "Menü-Eintrag"
+
+#: src/View/Gtk/Main.cpp:811
+msgid ""
+"An menuentry which is visible at the grub menu and boots an operating system "
+"when activated."
+msgstr ""
+"Ein Menüentrag, der im Bootmenü angezeigt wird und ein Betriebssystem "
+"startet, solald es angeklickt wird."
+
+#: src/View/Gtk/Main.cpp:812 src/View/Gtk/Element/List.h:128
+msgid "submenu"
+msgstr "Untermenü"
+
+#: src/View/Gtk/Main.cpp:813
+msgid ""
+"A group of other operating systems. Grub shows it as a normal menuentry "
+"however when clicking it, it loads another menu which allows you to choose "
+"one the the containing menuentries."
+msgstr ""
+"Eine Gruppe mehrerer Betriebssysteme. Grub zeigt diese als normalen "
+"Menueintrag an. Bei einem Klick darauf wird jedoch nicht direkt ein "
+"Betriebssystem gestartet, sondern es wird ein weiteres Menü geladen, welches "
+"die in dieser Gruppe enthaltenen Menüeinträge anzeigt."
+
+#: src/View/Gtk/Main.cpp:815 src/View/Gtk/Element/List.h:130
+msgid "placeholder"
+msgstr "Platzhalter"
+
+#: src/View/Gtk/Main.cpp:816
+msgid ""
+"There are two types of this special entry: Incoming entries are the place "
+"where Grub Customizer places new operating systems which are found by grub "
+"but still not configured using Grub Customizer. The Script code is code "
+"generated by grub which doesn't look like an menuentry. In most cases it's "
+"used to configure grub. You should only touch it when knowing what it does. "
+"Placeholders are hidden by default."
+msgstr ""
+"Es gibt 2 Arten dieses speziellen Menüeintrags: hinzukommende Einträge sind "
+"der Platz, an dem Grub Customizer neue Betriebssysteme platziert, die von "
+"Grub gefunden aber nicht nicht konfiguriert wurden. Bei Skipt-Code handelt "
+"es sich hingegen um Code, der von Grub generiert wurde aber nicht nach einem "
+"normalen Menüeintrag aussieht. Normalerweise dient er dazu, Grub zu "
+"konfigurieren. Er sollte nur geändert/entfernt werden, wenn die Auswirkungen "
+"bekannt sind. Platzhalter werden normalerweise nicht angezeigt."
+
+#: src/View/Gtk/Main.cpp:821 src/View/Gtk/Element/List.h:126
+msgid "script"
+msgstr "Skript"
+
+#: src/View/Gtk/Main.cpp:822
+msgid ""
+"Scripts are generating menuentries. So every menuentry belongs to a script. "
+"They are shown as top level groups when activated. However in contrast to "
+"submenus they aren't shown at the boot menu."
+msgstr ""
+"Skripte generieren Menu-Einträge. Jeder Menü-Eintrag ist deshalb mit einem "
+"Skript verbunden. Wenn aktiviert, bilden sie die höchste Ebene in der Liste "
+"der Menüeinträge. Im Gegensatz zu Untermenüs werden sie aber dennoch nicht "
+"im Bootmenü angezeigt."
+
+#: src/View/Gtk/Main.cpp:829
+msgid "About the entry types"
+msgstr "Information zu den Menüeintrag-Arten"
+
+#: src/View/Gtk/Main.cpp:891
+msgid "The saved configuration is not up to date!"
+msgstr "Die gespeicherte Konfiguration ist nicht aktuell!"
+
+#: src/View/Gtk/Main.cpp:892
+msgid ""
+"The generated configuration didn't equal to the saved configuration on "
+"startup. So what you see now may not be what you see when you restart your "
+"pc. To fix this, click update!"
+msgstr ""
+"Die generierte Konfiguration kommt nicht mit der beim Start abgespeicherten "
+"gleich - also ist das, was Sie jetzt sehen, eventuell nicht das, was Sie "
+"sehen, wenn Sie ihren PC neu gestartet haben. Klicken Sie auf \"Update\", um "
+"das zu beheben !"
+
+#: src/View/Gtk/Main.cpp:895
+msgid "_Quit without update"
+msgstr "_Beenden, ohne zu aktualisieren"
+
+#: src/View/Gtk/Main.cpp:898
+msgid "_Update & Quit"
+msgstr "_Aktualisieren und Beenden"
+
+#: src/View/Gtk/Main.cpp:902
+msgid "Do you want to save your modifications?"
+msgstr "Möchten Sie ihre Veränderungen speichern ?"
+
+#: src/View/Gtk/Main.cpp:905
+msgid "_Quit without saving"
+msgstr "_Beenden, ohne zu speichern"
+
+#: src/View/Gtk/Main.cpp:908
+msgid "_Save & Quit"
+msgstr "_Speichern und Beenden"
+
+#: src/View/Gtk/Main.cpp:911
+msgid "AND: your modifications are still unsaved, update will save them too!"
+msgstr ""
+"UND : Es gibt noch einige ungespeicherte Änderungen, \"update\" wird diese "
+"auch speichern !"
+
+#: src/View/Gtk/Main.cpp:964
+msgid "Failed saving grub configuration!"
+msgstr "Speicherung der Konfiguration fehlgeschlagen"
+
+#: src/View/Gtk/Main.cpp:965
+msgid "The grub configuration cannot be saved"
+msgstr "Die Konfiguration kann nicht gespeichert werden"
+
+#: src/View/Gtk/Main.cpp:966
+msgid ""
+"Please take a look at the command line output below. If you think this is a "
+"bug of Grub Customizer, please create one at %1! Generally Grub Customizer "
+"should prevent errors like this."
+msgstr ""
+"Siehe Kommandozeilen-Ausgabe. Bitte erstelle einen Bug unter %1 falls du "
+"denkst, dass es sich um einen Fehler von Grub Customizer handelt. "
+"Grundsätzlich sollte Grub Customizer solche Fehler verhindern."
+
+#: src/View/Gtk/Main.cpp:971
+msgid ""
+"%1 couldn't be executed successfully. error message:\n"
+" %2"
+msgstr ""
+"%1 konnte nicht erfolgreich ausgeführt werden. Fehlermeldung :\n"
+" %2"
+
+#: src/View/Gtk/Main.cpp:973
+msgid "Environment settings"
+msgstr "Umgebungs-Einstellungen:"
+
+#: src/View/Gtk/Main.cpp:985
+msgid "Do you want to proceed without saving the current configuration?"
+msgstr "Möchten Sie fortfahren, ohne die aktuelle Konfiguration zu speichern?"
+
+#: src/View/Gtk/Main.cpp:986
+msgid "There are unsaved modifications!"
+msgstr "Es gibt ungespeicherte Änderungen!"
+
+#: src/View/Gtk/Settings.cpp:30
+msgid "pre_defined: "
+msgstr "vor_definiert : "
+
+#: src/View/Gtk/Settings.cpp:30
+msgid "previously _booted entry"
+msgstr "vorher _gebooteter Eintrag"
+
+#: src/View/Gtk/Settings.cpp:31
+msgid "default entry"
+msgstr "Standardeintrag"
+
+#: src/View/Gtk/Settings.cpp:31
+msgid "visibility"
+msgstr "Sichtbarkeit"
+
+#: src/View/Gtk/Settings.cpp:31
+msgid "show menu"
+msgstr "Menü anzeigen"
+
+#: src/View/Gtk/Settings.cpp:32
+msgid "kernel parameters"
+msgstr "Kernelparameter"
+
+#: src/View/Gtk/Settings.cpp:33
+msgid "generate recovery entries"
+msgstr "Sicherungseinträge generieren"
+
+#: src/View/Gtk/Settings.cpp:33
+msgid "look for other operating systems"
+msgstr "Nach anderen Betriebssystemen sehen"
+
+#: src/View/Gtk/Settings.cpp:34
+msgid "custom resolution: "
+msgstr "Auflösung festlegen: "
+
+#: src/View/Gtk/Settings.cpp:37
+msgid "settings"
+msgstr "Einstellungen"
+
+#: src/View/Gtk/Settings.cpp:41
+msgid "_General"
+msgstr "_Allgemein"
+
+#: src/View/Gtk/Settings.cpp:42
+msgid "A_ppearance"
+msgstr "E_rscheinungsbild"
+
+#: src/View/Gtk/Settings.cpp:43
+msgid "_Advanced"
+msgstr "E_rweitert"
+
+#: src/View/Gtk/Settings.cpp:56
+msgid "is active"
+msgstr "ist aktiv"
+
+#: src/View/Gtk/Settings.cpp:57
+msgid "name"
+msgstr "Name"
+
+#: src/View/Gtk/Settings.cpp:58
+msgid "value"
+msgstr "Wert"
+
+#: src/View/Gtk/Settings.cpp:112
+msgid "Boot default entry after %1 Seconds"
+msgstr "Vorgabe-Menüeintrag nach %1 Sekunden starten"
+
+#: src/View/Gtk/Settings.cpp:203
+msgid "Entry %1 (by position)"
+msgstr "Eintrag %1 (nach Position)"
+
+#: src/View/Gtk/Settings.cpp:398
+msgid ""
+"This option doesn't work when the \"os-prober\" script finds other operating "
+"systems. Disable \"%1\" if you don't need to boot other operating systems."
+msgstr ""
+"Diese Option funktioniert nicht, wenn der \"os-prober\" andere "
+"Betriebssysteme findet. Schalten Sie \"%1\" aus, wenn Sie die Option, andere "
+"Betriebsysteme zu booten, nicht benötigen."
+
+#: src/View/Gtk/Settings.cpp:493
+msgid ""
+"This option allows choosing the operating system which should be selected "
+"when booting. By default this always is the first one.\n"
+"\n"
+"There are two columns because there are two ways of selecting the default "
+"operating system. The first way is to say \"always select the operating "
+"system at position X\". This means when a new menuentry appears, the default "
+"menuentry may change (because there's another one at Position X).\n"
+"\n"
+"The other way is to say \"use the operating system named Linux 123\". Then "
+"it will always point to the same operating system - the position doesn't "
+"matter. When changing the name of an entry using Grub Customizer this option "
+"will be updated automatically. So you won't have to re-select the default "
+"entry."
+msgstr ""
+"Diese Option ermöglicht es, den Menüeintrag auszuwählen, der bei einem "
+"Systemstart vorausgewählt werden sollte. Standardmäßig ist dies immer der "
+"erste Menüeintrag\n"
+"Es gibt 2 Spalten, weil es 2 Möglichkeiten gibt, den vorausgewählten "
+"Menüeintrag festzulegen. Die erste Möglichkeit ist, zu sagen \"Bitte immer "
+"den Menüeintrag auf Position X wählen\". Das führt dazu, dass sich der "
+"vorausgewählte Menüeintrag bei Hinzukommen eines neuen Menüeintrags ändern "
+"könnte (da auf Position X ja nun etwas Anderes ist).\n"
+"\n"
+"Der andere Weg besteht darin, zu sagen: \"bitte immer das Betriebssystem mit "
+"dem Namen Linux 123 vorauswählen\". Dann wird immer auf das gleiche "
+"Betriebssystem verwiesen - egal, wo dieses sich befindet. Bei einer Änderung "
+"des Namens (mithilfe von Grub Customizer) wird diese Option automatisch "
+"aktualisiert. Es muss demnach nicht erneut gewählt werden."
+
+#: src/View/Gtk/Theme.cpp:22
+msgid "_Load file: "
+msgstr "Datei _laden: "
+
+#: src/View/Gtk/Theme.cpp:24
+msgid "_Theme:"
+msgstr "_Thema:"
+
+#: src/View/Gtk/Theme.cpp:24
+msgid "background image"
+msgstr "Hintergrundbild"
+
+#: src/View/Gtk/Theme.cpp:27
+msgid "Please choose a background image!"
+msgstr "Bitte ein Hintergrundbild wählen!"
+
+#: src/View/Gtk/Theme.cpp:28
+msgid "_Font"
+msgstr "_Schriftart"
+
+#: src/View/Gtk/Theme.cpp:30
+msgid "choose theme file"
+msgstr "Bitte eine Themen-Datei wählen"
+
+#: src/View/Gtk/Theme.cpp:31
+msgid "Theme contents"
+msgstr "Inhalte des Themas"
+
+#: src/View/Gtk/Theme.cpp:31
+msgid "Custom Theme settings"
+msgstr "Einstellungen des benutzerdefinierten Themas"
+
+#: src/View/Gtk/Theme.cpp:32
+msgid "Normal: Font"
+msgstr "normal: Schriftart"
+
+#: src/View/Gtk/Theme.cpp:33
+msgid "Normal: Background"
+msgstr "Normal: Hintergrund"
+
+#: src/View/Gtk/Theme.cpp:34
+msgid "Highlighted: Font"
+msgstr "Hervorgehoben: Schriftart"
+
+#: src/View/Gtk/Theme.cpp:35
+msgid "Highlighted: Background"
+msgstr "Hervorgehoben: Hintergrund"
+
+#: src/View/Gtk/Theme.cpp:106
+msgid "File"
+msgstr "Datei"
+
+#: src/View/Gtk/Theme.cpp:117
+msgid "add theme"
+msgstr "Thema hinzufügen"
+
+#: src/View/Gtk/Theme.cpp:118
+msgid "delete this theme"
+msgstr "Dieses Thema löschen"
+
+#: src/View/Gtk/Theme.cpp:130
+msgid "Archive files"
+msgstr "Archiv-Dateien"
+
+#: src/View/Gtk/Theme.cpp:135
+msgid "All files"
+msgstr "Alle Dateien"
+
+#: src/View/Gtk/Theme.cpp:179
+msgid "remove font"
+msgstr "Schrift entfernen"
+
+#: src/View/Gtk/Theme.cpp:198
+msgid "remove background"
+msgstr "Hintergrund entfernen"
+
+#: src/View/Gtk/Theme.cpp:294
+msgid "white"
+msgstr "weiß"
+
+#: src/View/Gtk/Theme.cpp:295
+msgid "yellow"
+msgstr "gelb"
+
+#: src/View/Gtk/Theme.cpp:296
+msgid "light-cyan"
+msgstr "helles cyan"
+
+#: src/View/Gtk/Theme.cpp:297
+msgid "cyan"
+msgstr "cyan"
+
+#: src/View/Gtk/Theme.cpp:298
+msgid "light-blue"
+msgstr "hellblau"
+
+#: src/View/Gtk/Theme.cpp:299
+msgid "blue"
+msgstr "blau"
+
+#: src/View/Gtk/Theme.cpp:300
+msgid "light-green"
+msgstr "hellgrün"
+
+#: src/View/Gtk/Theme.cpp:301
+msgid "green"
+msgstr "grün"
+
+#: src/View/Gtk/Theme.cpp:302
+msgid "light-magenta"
+msgstr "hellmagenta"
+
+#: src/View/Gtk/Theme.cpp:303
+msgid "magenta"
+msgstr "magenta"
+
+#: src/View/Gtk/Theme.cpp:304
+msgid "light-red"
+msgstr "hellrot"
+
+#: src/View/Gtk/Theme.cpp:305
+msgid "red"
+msgstr "rot"
+
+#: src/View/Gtk/Theme.cpp:306
+msgid "brown"
+msgstr "braun"
+
+#: src/View/Gtk/Theme.cpp:307
+msgid "light-gray"
+msgstr "hellgrau"
+
+#: src/View/Gtk/Theme.cpp:308
+msgid "dark-gray"
+msgstr "dunkelgrau"
+
+#: src/View/Gtk/Theme.cpp:309
+msgid "transparent"
+msgstr "Transparent"
+
+#: src/View/Gtk/Theme.cpp:309
+msgid "black"
+msgstr "schwarz"
+
+#: src/View/Gtk/Theme.cpp:385
+msgid "(Custom Settings)"
+msgstr "(benutzerdefinierte Einstellungen)"
+
+#: src/View/Gtk/Theme.cpp:432
+msgid "The chosen file cannot be loaded as theme"
+msgstr "Die gewählte Datei kann nicht als Thema geladen werden"
+
+#: src/View/Gtk/Theme.cpp:435
+msgid "The given filename cannot be used"
+msgstr "Der angegebene Dateiname kann nicht verwendet werden!"
+
+#: src/View/Gtk/Theme.cpp:438
+msgid ""
+"This theme doesn't contain a theme.txt. Please look for the config file and "
+"rename it to \"theme.txt\"!"
+msgstr ""
+"Dieses Thema enthält keine theme.txt. Bitte schaue nach einer "
+"Konfigurationsdatei und benenne sie um nach \"theme.txt\"!"
+
+#: src/View/Gtk/Theme.cpp:441
+msgid "Saving of themes didn't succeed completely!"
+msgstr ""
+"Das Speichern der Themes konnte nicht erfolgreich abgeschlossen werden!"
+
+#: src/View/Gtk/Theme.cpp:444
+msgid "File replacement failed. Please select a theme file first!"
+msgstr "Datei-Ersetzung fehlgeschladen. Bitte wähle zuerst eine Themen-Datei!"
+
+#: src/View/Gtk/Theme.cpp:463
+msgid "filename"
+msgstr "Dateiname"
+
+#: src/View/Gtk/Theme.cpp:495
+msgid ""
+"please note: large fonts on low boot screen resolutions can corrupt the boot "
+"screen\n"
+"Because this problem depends on chosen font, it isn't possible to define a "
+"general maximum. When you're trying to select a larger font, please do it in "
+"small steps (rebooting and checking the results).\n"
+"The problem occurs when the grub gui elements (borders, description) wont "
+"fit into screen. So while there's enough vertical space you can try a larger "
+"font. The mass of menuentries is not a problem - they are scrolled if "
+"required.\n"
+"\n"
+"The corruption results in a endless loading time of grub2. You need a live "
+"cd to fix this:\n"
+" * delete the font from (MOUNT)/boot/grub/unicode.pf2\n"
+" * reboot your system (menu should show up with default fonts)\n"
+" * open /etc/default/grub with root permissions and place a '#' in front of "
+"the line containing GRUB_FONT\n"
+" * then run grub customizer to choose the font used before"
+msgstr ""
+"Bitte beachte: große Schriften können in Kombination mit niedrigen "
+"Bildschrim-Auflösungen unbenutzbar machen\n"
+"Da dieses Problem auch von der Schriftart anhängt, ist es nicht möglich ein "
+"allgemeines Maximum festzulegen. Daher sollte zunächst eine kleinere Schrift "
+"gewählt werden, die nach und nach vergrößert wird (zwischendurch immer "
+"neustarten und prüfen).\n"
+"Das Problem hängt damit zusammen, dass die GUI-Elemente (Rahmen etc) bei zu "
+"großer Schrift über den Bildschirm hinausgeht. Solange also noch genug Platz "
+"frei ist, kann die Schrift schrittweise vergrößert werden. Die Anzahl der "
+"Menüeinträge ist damit kein Problem. Diese bekommen notfalls einen Scroll-"
+"Balken.\n"
+"\n"
+"Das Problem führt dazu, dass das Bootmenü nicht mehr angezeigt wird - Grub "
+"hängt sich komplett auf. Für den Notfall sollte also ggf. eine Live-CD "
+"bereitgehalten werden.\n"
+"Vorgehensweise im Fehlerfall:\n"
+" * Schrift-Datei löschen: (MOUNT)/boot/grub/unicode.pf2\n"
+" * System neustarten (das Menü sollte nun wieder mit der normalen Schrift "
+"angezeigt werden)\n"
+" * die Datei /etc/default/grub mit root-Rechten öffnen und ein '#' vor die "
+"Zeile platzieren, die mit GRUB_FONT beginnt\n"
+" * Grub Customizer ausführen und eine besser funktionierende Schrift-Art/"
+"Größe wählen"
+
+#: src/View/Gtk/Theme.cpp:507
+msgid "Grub fonts can be harmful (Info)"
+msgstr "Grub-Schriftarten können unter Umständen gefährlich sein (Information)"
+
+#: src/View/Gtk/Theme.cpp:707
+msgid "Are you sure you want to remove this theme"
+msgstr "Bist du sicher, dass dieses Thema entfernt werden soll?"
+
+#: src/View/Gtk/Theme.cpp:775
+msgid ""
+"Alternatively to the simple theme method which provides some options like "
+"color, wallpaper and font you can install complex theme packages to get an "
+"even better looking boot menu.\n"
+"\n"
+"There are several download sources like this thread at ubuntuforums.org:\n"
+"<a href='%1'>%1</a> (needs account)\n"
+"or search for '%2' at <a href='%3'>%3</a>\n"
+"\n"
+"Just download such a package (which is in tar.gz format in most cases) and "
+"add it to the list of available themes by using the add button next to the "
+"theme chooser.\n"
+"\n"
+"After changing the theme you'll see a simple editor which gives a preview of "
+"images and allows some file management. Modified theme contents will be "
+"saved when you're pressing the save button."
+msgstr ""
+"Alternativ zur einfachen Theming-Methode, welche ein paar Optionen wie "
+"Farbe, Hintergrundbild und Schrift bietet, können auch komplexe Themen-"
+"Pakete installiert werden, um ein noch besser aussehendes Bootmenü zu "
+"erhalten.\n"
+"\n"
+"Es gibt mehrere Quellen, z.B. diesen Thread auf ubuntuforums.org:\n"
+"<a href='%1'>%1</a> (Account notwendig)\n"
+"oder eine Suche nach '%2' unter <a href='%3'>%3</a>\n"
+"\n"
+"Einfach ein Paket herunterladen (in den meisten Fällen eine tar.gz-Datei) "
+"und zur Liste verfügbarer Themen hinzufügen - durch die Benutzung des "
+"Hinzufügen-Buttons neben der Themen-Auswahl.\n"
+"\n"
+"Nach der Änderung des Themas, wird ein einfacher Editor angezeigt, welcher "
+"eine Vorschau diverser Dateien und Bilder anzeigt sowie einfaches Datei-"
+"Management ermöglicht. Geänderte Inhalte werden gespeichert, sobald der "
+"Speichern-Button gedrückt wird."
+
+#: src/View/Gtk/Trash.cpp:28
+msgid "Add entry from trash"
+msgstr "Menü-Eintrag aus dem Papierkorb wiederherstellen"
+
+#: src/View/Gtk/Trash.cpp:32
+msgid "Removed items"
+msgstr "Entfernte Inhalte"
+
+#: src/View/Gtk/Trash.cpp:42
+msgid "_Restore"
+msgstr "Wiederherstellen"
+
+#: src/View/Gtk/Trash.cpp:44
+msgid "Restore selected entries"
+msgstr "gewählte Einträge wiederherstellen"
+
+#: src/View/Gtk/Trash.cpp:49
+msgid "permanently delete selected entries"
+msgstr "gewählte Einträge permanent entfernen"
+
+#: src/View/Gtk/Trash.cpp:57
+msgid ""
+"delete entries permanently - this action is available on custom entries only"
+msgstr ""
+"Einträge permanent entfernen - nur bei benutzerdefinierten Einträgen möglich"
+
+#: src/View/Gtk/Trash.cpp:122
+msgid "This deletes the following entries:"
+msgstr "Die folgenden Menü-Einträge werden durch diese Aktion gelöscht:"
+
+#: src/View/Gtk/Element/List.h:135
+msgid "script: "
+msgstr "Skript: "
+
+#: src/View/Gtk/Element/List.h:139
+msgid "default name: "
+msgstr "Vorgabetitel: "
+
+#: src/View/Gtk/Element/List.h:143
+msgid "Partition: "
+msgstr "Partition: "
+
+#: src/View/Gtk/Element/PartitionChooser.cpp:48
+msgid "current"
+msgstr "dieses System"

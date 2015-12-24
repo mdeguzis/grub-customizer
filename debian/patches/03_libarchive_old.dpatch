@@ -1,0 +1,114 @@
+#! /bin/sh /usr/share/dpatch/dpatch-run
+## 03_libarchive_old.dpatch by  <daniel@daniel-laptop>
+##
+## All lines beginning with `## DP:' are a description of the patch.
+## DP: No description.
+
+@DPATCH@
+diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' '--exclude=.hg' '--exclude=_darcs' '--exclude=.bzr' B_GrubCustomizer_3~/debian/patches/02gtkmm_combobox_legacy.dpatch B_GrubCustomizer_3/debian/patches/02gtkmm_combobox_legacy.dpatch
+--- B_GrubCustomizer_3~/debian/patches/02gtkmm_combobox_legacy.dpatch	1970-01-01 01:00:00.000000000 +0100
++++ B_GrubCustomizer_3/debian/patches/02gtkmm_combobox_legacy.dpatch	2013-12-26 20:55:30.799867686 +0100
+@@ -0,0 +1,32 @@
++#! /bin/sh /usr/share/dpatch/dpatch-run
++## 02gtkmm_combobox_legacy.dpatch by  <daniel@daniel-pc>
++##
++## All lines beginning with `## DP:' are a description of the patch.
++## DP: No description.
++
++@DPATCH@
++diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' '--exclude=.hg' '--exclude=_darcs' '--exclude=.bzr' 3x~/src/View/Gtk/EnvEditor.cpp 3x/src/View/Gtk/EnvEditor.cpp
++--- 3x~/src/View/Gtk/EnvEditor.cpp	2012-08-31 18:27:59.000000000 +0200
+++++ 3x/src/View/Gtk/EnvEditor.cpp	2012-09-07 23:25:54.000000000 +0200
++@@ -50,8 +50,8 @@
++ 	this->lblSubmountpoints.set_no_show_all(true);
++ 	this->scrSubmountpoints.set_no_show_all(true);
++ 
++-	this->cbType.append(gettext("Grub 2"));
++-	this->cbType.append(gettext("BURG"));
+++	this->cbType.append_text(gettext("Grub 2"));
+++	this->cbType.append_text(gettext("BURG"));
++ 	this->cbType.set_active(0);
++ 	this->cbType.signal_changed().connect(sigc::mem_fun(this, &View_Gtk_EnvEditor::signal_bootloaderType_changed));
++ 
++diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' '--exclude=.hg' '--exclude=_darcs' '--exclude=.bzr' 3x~/src/View/Gtk/Main.cpp 3x/src/View/Gtk/Main.cpp
++--- 3x~/src/View/Gtk/Main.cpp	2012-09-07 19:10:31.000000000 +0200
+++++ 3x/src/View/Gtk/Main.cpp	2012-09-07 23:26:41.942131625 +0200
++@@ -112,7 +112,6 @@
++ 	toolbar.append(ti_sep5);
++ 
++ 	ti_sep5.set_expand(true);
++-	ti_sep5.set_draw(false);
++ 
++ 	toolbar.append(tbttRevert);
++ 	tbttRevert.set_is_important(true);
+diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' '--exclude=.hg' '--exclude=_darcs' '--exclude=.bzr' B_GrubCustomizer_3~/src/Model/Theme.cpp B_GrubCustomizer_3/src/Model/Theme.cpp
+--- B_GrubCustomizer_3~/src/Model/Theme.cpp	2013-12-26 20:54:15.000000000 +0100
++++ B_GrubCustomizer_3/src/Model/Theme.cpp	2013-12-26 20:53:58.608000000 +0100
+@@ -64,7 +64,7 @@
+ 	int r;
+ 
+ 	a = archive_read_new();
+-	archive_read_support_filter_all(a);
++	archive_read_support_compression_all(a);
+ 	archive_read_support_format_all(a);
+ 	r = archive_read_open_filename(a, zipFile.c_str(), 10240);
+ 	if (r != ARCHIVE_OK) {
+@@ -77,10 +77,6 @@
+ 		}
+ 		archive_read_data_skip(a);
+ 	}
+-	r = archive_read_free(a);
+-	if (r != ARCHIVE_OK) {
+-		throw InvalidFileTypeException("archive not readable", __FILE__, __LINE__);
+-	}
+ 
+ 	this->removeSubdir();
+ }
+@@ -141,7 +137,7 @@
+ 	std::string result;
+ 
+ 	a = archive_read_new();
+-	archive_read_support_filter_all(a);
++	archive_read_support_compression_all(a);
+ 	archive_read_support_format_all(a);
+ 	r = archive_read_open_filename(a, zipFile.c_str(), 10240);
+ 	if (r != ARCHIVE_OK) {
+@@ -158,10 +154,6 @@
+ 		}
+ 		archive_read_data_skip(a);
+ 	}
+-	r = archive_read_free(a);
+-	if (r != ARCHIVE_OK) {
+-		throw InvalidFileTypeException("archive not readable", __FILE__, __LINE__);
+-	}
+ 	return result;
+ }
+ 
+diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' '--exclude=.hg' '--exclude=_darcs' '--exclude=.bzr' B_GrubCustomizer_3~/src/Model/Theme.cpp.rej B_GrubCustomizer_3/src/Model/Theme.cpp.rej
+--- B_GrubCustomizer_3~/src/Model/Theme.cpp.rej	1970-01-01 01:00:00.000000000 +0100
++++ B_GrubCustomizer_3/src/Model/Theme.cpp.rej	2013-12-26 20:55:30.799867686 +0100
+@@ -0,0 +1,13 @@
++--- src/Model/Theme.cpp	2013-11-13 18:25:44.000000000 +0100
+++++ src/Model/Theme.cpp	2013-11-15 00:15:23.998000000 +0100
++@@ -77,10 +77,6 @@
++ 		}
++ 		archive_read_data_skip(a);
++ 	}
++-	r = archive_read_free(a);
++-	if (r != ARCHIVE_OK) {
++-		throw InvalidFileTypeException("archive not readable", __FILE__, __LINE__);
++-	}
++ }
++ 
++ std::string Model_Theme::loadFileContent(std::string localFileName) {
+diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' '--exclude=.hg' '--exclude=_darcs' '--exclude=.bzr' B_GrubCustomizer_3~/src/Model/Theme.h B_GrubCustomizer_3/src/Model/Theme.h
+--- B_GrubCustomizer_3~/src/Model/Theme.h	2013-12-26 20:54:15.000000000 +0100
++++ B_GrubCustomizer_3/src/Model/Theme.h	2013-12-26 20:53:58.608000000 +0100
+@@ -29,6 +29,7 @@
+ #include <archive_entry.h>
+ #include <map>
+ #include "../lib/assert.h"
++#include <string>
+ 
+ struct Model_Theme {
+ 	std::string directory;

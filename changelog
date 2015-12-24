@@ -1,0 +1,203 @@
+v 4.0.6
+	* showing save errors
+	* fixed background image flicker bug in trusty (image was reset to previous one when choosing inside of image selection window)
+
+v 4.0.5
+	* copyright fix: added OpenSSL exemption
+
+v 4.0.4
+	* improved grub-cfg parser - handling of encapsulated menuentries
+	* conflict resolution on startup (renumerate when there's something like 10_linux and 10_linux_proxy)
+	* fixed some errors of script update detector
+
+v 4.0.3
+	* translation updates
+	* theme packages: correct import from subdirectories
+
+v 4.0.2
+	* fixed some scriptUpdate related problems
+
+v 4.0.1
+	* error when there's a visible menuentry below a hidden submenu - fixed
+
+v 4.0
+	* hiding placeholders
+	* view options
+	* improved trash view
+	* GTKmm 3.0
+	* Theming
+	* improved appearance settings
+	* script replacement detection (no more duplicates when grub scripts are replaced by an update of grub)
+	* backup creation on first run (allows simple restoring of the default config)
+	* more help texts
+	* fallback on systems without grub-mkdevicemap/device.map (better compatibility)
+
+v 3.0.2
+	* crash if blkid prints devices without UUID... fixed
+	* translation updates
+
+v 3.0.1
+	* crash if blkid prints devices without UUID... fixed
+	* compiler problem fixed (new GCCs)
+
+v 3.0
+	* entries can be moved free now
+	* integrated settings dialog
+	* new partition chooser
+	* context menu
+	* multi selection
+	* trash instead of checkboxes
+	* entry editor
+	* graphical error handlung
+	* reset functionality
+	* warning when trying to remove script- or system entries
+	* bugfixes
+
+v 2.5.6
+	* made install- and tempfilepathes editable by custom cmake directives
+
+v 2.5.5
+	* improved kde menu compatibility
+	* translation updates
+	* preserving quote char (os-prober relates on them…)
+	* replaced update-grub by grub-mkconfig + output_file
+
+v 2.5.4
+	* added a missing include directive
+	* translation updates
+
+v 2.5.3
+	* fixed problems when there are multiple entries having the same name/path
+
+v 2.5.2
+	* renumeration of 00_header and 05_debian_theme nomore starting from 10 but using
+	  these fix values if possible
+	* translation updates
+
+v 2.5.1
+	* some changes to make the background image and colors working on fedora
+	* minor improvements...
+
+v. 2.5
+	* using policykit instead of su-to-root (there's an patch for older distibutions)
+	* custom submenus (users are able to add/remove submenus)
+	* indentification of the source entries by its content (additional to name and position)
+	* made live cd detection ubuntu 11.10 capable
+	* moved menu entry to system section
+	* fixed crash (when doing reload)
+	* custom grub pathes (/etc/grub-customizer/grub.cfg and /etc/grub-customizer/burg.cfg)
+
+v. 2.4.1
+	* fixed: preview rendering crashes on startup
+
+v. 2.4
+	* preview rendering (settings dialog)
+
+v. 2.3.4
+	* fixed some problem of the numeric default entry selection
+
+v. 2.3.3
+	* copying of the proxy if it exists too (solves some update problems)
+
+v. 2.3.2
+	* fixed: crash if the saved config contains "LS_" files that doesn't exist in /etc/grub.d
+	* whitespace from the last script wont be saved
+
+v. 2.3.1
+	* fixed crash issue (https://bugs.launchpad.net/grub-customizer/+bug/892261)
+
+v. 2.3
+	* improved error handling (showing grub-mkconfig errors)
+	* plaintext support (script parts outsinde of menuentries won't be removed anymore)
+
+v. 2.2.2
+	* no printing of empty submenus
+	* modification detection fixed
+
+v. 2.2.1
+	* bug 860820 (on launchpad) fixed
+
+v. 2.2.0
+	* full grub 1.99 compatibility
+
+v. 2.1.2
+	* menu colors fixed
+	* multiple loads (results in a chash) prevented
+	* empty setting names won't simply be saved anymore
+	* settings dialog now better handles the case when entries doesn't exist
+	* translation updates
+
+v. 2.1.1
+   * better conf corruption detection/fix functionality.
+   * improved view of disabled script entries.
+   * translation updates.
+
+v. 2.1
+   * based on MVP pattern.
+   * no modal windows.
+   * add/remove entry buttons in settings dialog.
+
+v. 2.0.8
+   * french and hungarian translation updated.
+
+v 2.0.7
+   * spanish and italian translation updated (now complete).
+
+v. 2.0.6
+   * lintian and compiler warnings removed.
+   * manpage created.
+   * using su-to-root instead of gksu in the menu entry.
+
+v. 2.0.5
+   * translations updated.
+
+v. 2.0.4
+   * chineese translation added, frensh and turkish 
+     translation updated.
+   * fixed: timeout not settable when "show menu" not selected.
+   * renamed "black" to "transparent" in background selection.
+
+v. 2.0.3
+   * fixed: crash when choosing an img which can not
+     be displayed by gtk.
+   * polish translation updated.
+
+v. 2.0.2
+   * translations (Greek and Ukrainian) updated.
+
+v. 2.0.1
+   * Bulgarian and Turkish translation updated.
+   * some partition chooser bugfixes.
+
+v. 2.0
+   * settings manager included.
+
+v. 1.6.4
+   * translations updated.
+
+v. 1.6.3
+   * translations updated.
+
+v. 1.6.2
+   * greek translation updated.
+   * translators added to the about dialog.
+
+v. 1.6.1
+   * fixed burg mode indentfier (has not been updated).
+   * translations included.
+
+v. 1.6 
+   * bug #661304 fixed (multiple scripts using the same 
+     basename will not be overwritten anymore).
+   * (new entries) will be displayed on uncustomized 
+     scripts too (the old behaviour was to fuzzy).
+   * the test, if a script requires a proxy, is now solved
+     dynamically (the previous behaviour was: when it's
+     modified, set proxy_required).
+   * the live cd setup assistant is now (renamed to
+     partition chooser) accessible after loading 
+    (by menubutton click) or if no bootloader found too.
+   * the toolbar button for saving the configuration is 
+     now marked as is_important (will be displayed 
+     larger in most cases).
+

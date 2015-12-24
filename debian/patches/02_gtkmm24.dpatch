@@ -1,0 +1,784 @@
+#! /bin/sh /usr/share/dpatch/dpatch-run
+## 02_gtkmm24.dpatch by  <daniel@daniel-laptop>
+##
+## All lines beginning with `## DP:' are a description of the patch.
+## DP: No description.
+
+@DPATCH@
+diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' '--exclude=.hg' '--exclude=_darcs' '--exclude=.bzr' GrubCustomizer~/CMakeLists.txt GrubCustomizer/CMakeLists.txt
+--- GrubCustomizer~/CMakeLists.txt	2013-11-14 21:25:49.000000000 +0100
++++ GrubCustomizer/CMakeLists.txt	2013-11-14 21:29:04.993000000 +0100
+@@ -4,7 +4,7 @@
+ 
+ find_package(PkgConfig)
+ 
+-pkg_check_modules(GTKMM gtkmm-3.0)
++pkg_check_modules(GTKMM gtkmm-2.4)
+ pkg_check_modules(GTHREAD gthread-2.0)
+ pkg_check_modules(OPENSSL openssl)
+ pkg_check_modules(LIBARCHIVE libarchive)
+diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' '--exclude=.hg' '--exclude=_darcs' '--exclude=.bzr' GrubCustomizer~/debian/patches/02gtkmm-2.4.dpatch GrubCustomizer/debian/patches/02gtkmm-2.4.dpatch
+--- GrubCustomizer~/debian/patches/02gtkmm-2.4.dpatch	1970-01-01 01:00:00.000000000 +0100
++++ GrubCustomizer/debian/patches/02gtkmm-2.4.dpatch	2012-09-17 00:36:13.832000000 +0200
+@@ -0,0 +1,322 @@
++#! /bin/sh /usr/share/dpatch/dpatch-run
++## 02gtkmm_combobox_legacy.dpatch by  <daniel@daniel-laptop>
++##
++## All lines beginning with `## DP:' are a description of the patch.
++## DP: No description.
++
++@DPATCH@
++diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' '--exclude=.hg' '--exclude=_darcs' '--exclude=.bzr' gtkmm3_new~/CMakeLists.txt gtkmm3_new/CMakeLists.txt
++--- gtkmm3_new~/CMakeLists.txt	2012-09-17 00:11:17.000000000 +0200
+++++ gtkmm3_new/CMakeLists.txt	2012-09-17 00:07:28.742000000 +0200
++@@ -4,7 +4,7 @@
++ 
++ find_package(PkgConfig)
++ 
++-pkg_check_modules(GTKMM gtkmm-3.0)
+++pkg_check_modules(GTKMM gtkmm-2.4)
++ pkg_check_modules(GTHREAD gthread-2.0)
++ pkg_check_modules(OPENSSL openssl)
++ 
++diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' '--exclude=.hg' '--exclude=_darcs' '--exclude=.bzr' gtkmm3_new~/debian/patches/02gtkmm_combobox_legacy.dpatch gtkmm3_new/debian/patches/02gtkmm_combobox_legacy.dpatch
++--- gtkmm3_new~/debian/patches/02gtkmm_combobox_legacy.dpatch	1970-01-01 01:00:00.000000000 +0100
+++++ gtkmm3_new/debian/patches/02gtkmm_combobox_legacy.dpatch	2012-09-09 22:08:03.680456000 +0200
++@@ -0,0 +1,32 @@
+++#! /bin/sh /usr/share/dpatch/dpatch-run
+++## 02gtkmm_combobox_legacy.dpatch by  <daniel@daniel-pc>
+++##
+++## All lines beginning with `## DP:' are a description of the patch.
+++## DP: No description.
+++
+++@DPATCH@
+++diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' '--exclude=.hg' '--exclude=_darcs' '--exclude=.bzr' 3x~/src/View/Gtk/EnvEditor.cpp 3x/src/View/Gtk/EnvEditor.cpp
+++--- 3x~/src/View/Gtk/EnvEditor.cpp	2012-08-31 18:27:59.000000000 +0200
++++++ 3x/src/View/Gtk/EnvEditor.cpp	2012-09-07 23:25:54.000000000 +0200
+++@@ -50,8 +50,8 @@
+++ 	this->lblSubmountpoints.set_no_show_all(true);
+++ 	this->scrSubmountpoints.set_no_show_all(true);
+++ 
+++-	this->cbType.append(gettext("Grub 2"));
+++-	this->cbType.append(gettext("BURG"));
++++	this->cbType.append_text(gettext("Grub 2"));
++++	this->cbType.append_text(gettext("BURG"));
+++ 	this->cbType.set_active(0);
+++ 	this->cbType.signal_changed().connect(sigc::mem_fun(this, &View_Gtk_EnvEditor::signal_bootloaderType_changed));
+++ 
+++diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' '--exclude=.hg' '--exclude=_darcs' '--exclude=.bzr' 3x~/src/View/Gtk/Main.cpp 3x/src/View/Gtk/Main.cpp
+++--- 3x~/src/View/Gtk/Main.cpp	2012-09-07 19:10:31.000000000 +0200
++++++ 3x/src/View/Gtk/Main.cpp	2012-09-07 23:26:41.942131625 +0200
+++@@ -112,7 +112,6 @@
+++ 	toolbar.append(ti_sep5);
+++ 
+++ 	ti_sep5.set_expand(true);
+++-	ti_sep5.set_draw(false);
+++ 
+++ 	toolbar.append(tbttRevert);
+++ 	tbttRevert.set_is_important(true);
++diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' '--exclude=.hg' '--exclude=_darcs' '--exclude=.bzr' gtkmm3_new~/src/View/Gtk/Element/PartitionChooser.cpp gtkmm3_new/src/View/Gtk/Element/PartitionChooser.cpp
++--- gtkmm3_new~/src/View/Gtk/Element/PartitionChooser.cpp	2012-09-17 00:11:17.000000000 +0200
+++++ gtkmm3_new/src/View/Gtk/Element/PartitionChooser.cpp	2012-09-17 00:07:28.742000000 +0200
++@@ -43,16 +43,16 @@
++ }
++ 
++ void View_Gtk_Element_PartitionChooser::load(){
++-	this->remove_all();
+++	this->clear_items();
++ 	if (prependCurrentPartition) {
++-		this->append(currentPartitionName + "\n(" + gettext("current") + ")");
+++		this->append_text(currentPartitionName + "\n(" + gettext("current") + ")");
++ 		this->set_active(0);
++ 	}
++ 	for (Model_DeviceDataListInterface::const_iterator iter = deviceDataList->begin(); iter != deviceDataList->end(); iter++) {
++ 		if (iter->second.find("UUID") != iter->second.end()) {
++ 			Glib::ustring text = iter->first + "\n(" + (iter->second.find("LABEL") != iter->second.end() ? iter->second.at("LABEL") + ", " : "") + (iter->second.find("TYPE") != iter->second.end() ? iter->second.at("TYPE") : "") + ")";
++ 			uuid_map[text] = iter->second.at("UUID");
++-			this->append(text);
+++			this->append_text(text);
++ 			if (strToLower(iter->second.at("UUID")) == strToLower(activePartition_uuid) || (activePartition_uuid == "" && iter == deviceDataList->begin() && !prependCurrentPartition)) {
++ 				this->set_active_text(text);
++ 			}
++diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' '--exclude=.hg' '--exclude=_darcs' '--exclude=.bzr' gtkmm3_new~/src/View/Gtk/EntryEditor.cpp gtkmm3_new/src/View/Gtk/EntryEditor.cpp
++--- gtkmm3_new~/src/View/Gtk/EntryEditor.cpp	2012-09-17 00:11:17.000000000 +0200
+++++ gtkmm3_new/src/View/Gtk/EntryEditor.cpp	2012-09-17 00:07:28.742000000 +0200
++@@ -170,11 +170,11 @@
++ }
++ 
++ void View_Gtk_EntryEditor::setAvailableEntryTypes(std::list<std::string> const& names) {
++-	this->cbType.remove_all();
+++	this->cbType.clear_items();
++ 	for (std::list<std::string>::const_iterator iter = names.begin(); iter != names.end(); iter++) {
++-		this->cbType.append(*iter);
+++		this->cbType.append_text(*iter);
++ 	}
++-	this->cbType.append(gettext("Other"));
+++	this->cbType.append_text(gettext("Other"));
++ }
++ 
++ void View_Gtk_EntryEditor::selectType(std::string const& name) {
++diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' '--exclude=.hg' '--exclude=_darcs' '--exclude=.bzr' gtkmm3_new~/src/View/Gtk/EnvEditor.cpp gtkmm3_new/src/View/Gtk/EnvEditor.cpp
++--- gtkmm3_new~/src/View/Gtk/EnvEditor.cpp	2012-09-17 00:11:17.000000000 +0200
+++++ gtkmm3_new/src/View/Gtk/EnvEditor.cpp	2012-09-17 00:07:28.742000000 +0200
++@@ -50,8 +50,8 @@
++ 	this->lblSubmountpoints.set_no_show_all(true);
++ 	this->scrSubmountpoints.set_no_show_all(true);
++ 
++-	this->cbType.append(gettext("Grub 2"));
++-	this->cbType.append(gettext("BURG"));
+++	this->cbType.append_text(gettext("Grub 2"));
+++	this->cbType.append_text(gettext("BURG"));
++ 	this->cbType.set_active(0);
++ 	this->cbType.signal_changed().connect(sigc::mem_fun(this, &View_Gtk_EnvEditor::signal_bootloaderType_changed));
++ 
++@@ -132,11 +132,11 @@
++ 
++ 		Glib::RefPtr<Gdk::Pixbuf> icon;
++ 		if (std::find(validProps.begin(), validProps.end(), iter->first) != validProps.end()) {
++-			icon = this->render_icon_pixbuf(Gtk::Stock::OK, Gtk::ICON_SIZE_BUTTON);
+++			icon = this->render_icon(Gtk::Stock::OK, Gtk::ICON_SIZE_BUTTON);
++ 		} else if (std::find(requiredProps.begin(), requiredProps.end(), iter->first) != requiredProps.end()) {
++-			icon = this->render_icon_pixbuf(Gtk::Stock::DIALOG_ERROR, Gtk::ICON_SIZE_BUTTON);
+++			icon = this->render_icon(Gtk::Stock::DIALOG_ERROR, Gtk::ICON_SIZE_BUTTON);
++ 		} else {
++-			icon = this->render_icon_pixbuf(Gtk::Stock::DIALOG_WARNING, Gtk::ICON_SIZE_BUTTON);
+++			icon = this->render_icon(Gtk::Stock::DIALOG_WARNING, Gtk::ICON_SIZE_BUTTON);
++ 		}
++ 
++ 		img->set(icon);
++diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' '--exclude=.hg' '--exclude=_darcs' '--exclude=.bzr' gtkmm3_new~/src/View/Gtk/Main.cpp gtkmm3_new/src/View/Gtk/Main.cpp
++--- gtkmm3_new~/src/View/Gtk/Main.cpp	2012-09-17 00:11:17.000000000 +0200
+++++ gtkmm3_new/src/View/Gtk/Main.cpp	2012-09-17 00:07:28.742000000 +0200
++@@ -71,8 +71,6 @@
++ 	
++ 	//toolbar
++ 	toolbar.append(tbttSave);
++-	Glib::RefPtr<Gtk::StyleContext> context = toolbar.get_style_context();
++-	context->add_class(GTK_STYLE_CLASS_PRIMARY_TOOLBAR);
++ 
++ 	tbttSave.set_is_important(true);
++ 	
++@@ -115,7 +113,6 @@
++ 	toolbar.append(ti_sep5);
++ 
++ 	ti_sep5.set_expand(true);
++-	ti_sep5.set_draw(false);
++ 
++ 	toolbar.append(tbttRevert);
++ 	tbttRevert.set_is_important(true);
++@@ -306,7 +303,7 @@
++ 	}
++ }
++ 
++-void View_Gtk_Main::signal_tab_changed(Gtk::Widget* page, guint page_num) {
+++void View_Gtk_Main::signal_tab_changed(GtkNotebookPage* page, guint page_num) {
++ 	if (this->eventListener && this->lock_state == 0) { // this->eventListener must be called because this event may be propagated from bootstrap
++ 		this->eventListener->refreshTabAction(page_num);
++ 	}
++@@ -381,13 +378,13 @@
++ 	outputName += "\n<small>";
++ 	if (is_submenu) {
++ 		outputName += gettext("submenu");
++-		icon = this->win.render_icon_pixbuf(Gtk::Stock::DIRECTORY, Gtk::ICON_SIZE_LARGE_TOOLBAR);
+++		icon = this->win.render_icon(Gtk::Stock::DIRECTORY, Gtk::ICON_SIZE_LARGE_TOOLBAR);
++ 	} else if (is_placeholder) {
++ 		outputName += gettext("placeholder");
++-		icon = this->win.render_icon_pixbuf(Gtk::Stock::FIND, Gtk::ICON_SIZE_LARGE_TOOLBAR);
+++		icon = this->win.render_icon(Gtk::Stock::FIND, Gtk::ICON_SIZE_LARGE_TOOLBAR);
++ 	} else {
++ 		outputName += gettext("menuentry");
++-		icon = this->win.render_icon_pixbuf(Gtk::Stock::EXECUTE, Gtk::ICON_SIZE_LARGE_TOOLBAR);
+++		icon = this->win.render_icon(Gtk::Stock::EXECUTE, Gtk::ICON_SIZE_LARGE_TOOLBAR);
++ 	}
++ 	if (scriptName != "") {
++ 		outputName += std::string(" / ") + gettext("script: ") + escapeXml(scriptName);
++diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' '--exclude=.hg' '--exclude=_darcs' '--exclude=.bzr' gtkmm3_new~/src/View/Gtk/Main.h gtkmm3_new/src/View/Gtk/Main.h
++--- gtkmm3_new~/src/View/Gtk/Main.h	2012-09-17 00:11:17.000000000 +0200
+++++ gtkmm3_new/src/View/Gtk/Main.h	2012-09-17 00:07:28.742000000 +0200
++@@ -180,7 +180,7 @@
++ 	void signal_key_press(GdkEventKey* key);
++ 	void signal_revert();
++ 	void signal_reload_recommendation_response(int response_id);
++-	void signal_tab_changed(Gtk::Widget* page, guint page_num);
+++	void signal_tab_changed(GtkNotebookPage* page, guint page_num);
++ };
++ 
++ #endif
++diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' '--exclude=.hg' '--exclude=_darcs' '--exclude=.bzr' gtkmm3_new~/src/View/Gtk/Settings.cpp gtkmm3_new/src/View/Gtk/Settings.cpp
++--- gtkmm3_new~/src/View/Gtk/Settings.cpp	2012-09-17 00:11:17.000000000 +0200
+++++ gtkmm3_new/src/View/Gtk/Settings.cpp	2012-09-17 00:07:28.742000000 +0200
++@@ -114,7 +114,7 @@
++ 	lblColorChooser(gettext("menu colors")), lblBackgroundImage(gettext("background image")),
++ 	imgRemoveBackground(Gtk::Stock::REMOVE, Gtk::ICON_SIZE_BUTTON), imgRemoveFont(Gtk::Stock::REMOVE, Gtk::ICON_SIZE_BUTTON),
++ 	lblBackgroundRequiredInfo(gettext("To get the colors above working,\nyou have to select a background image!")),
++-	gccNormalBackground(true), gccHighlightBackground(true), lblFont("_Font", true), cbResolution(true)
+++	gccNormalBackground(true), gccHighlightBackground(true), lblFont("_Font", true), cbResolution()
++ {
++ 	this->set_title("Grub Customizer - "+Glib::ustring(gettext("settings")));
++ 	this->set_icon_name("grub-customizer");
++@@ -212,7 +212,7 @@
++ 	alignResolution.set_padding(10, 0, 6, 0);
++ 	hbResolution.pack_start(chkResolution, Gtk::PACK_SHRINK);
++ 	hbResolution.pack_start(cbResolution);
++-	cbResolution.append("saved");
+++	cbResolution.append_text("saved");
++ 	
++ 	//color chooser
++ 	vbAppearanceSettings.pack_start(groupColorChooser, Gtk::PACK_SHRINK);
++@@ -292,7 +292,7 @@
++ 	bttRemoveBackground.signal_clicked().connect(sigc::mem_fun(this, &View_Gtk_Settings::signal_bttRemoveBackground_clicked));
++ 	bttAddCustomEntry.signal_clicked().connect(sigc::mem_fun(this, &View_Gtk_Settings::signal_add_row_button_clicked));
++ 	bttRemoveCustomEntry.signal_clicked().connect(sigc::mem_fun(this, &View_Gtk_Settings::signal_remove_row_button_clicked));
++-	drwBackgroundPreview.signal_draw().connect(sigc::mem_fun(this, &View_Gtk_Settings::signal_redraw_preview));
+++	drwBackgroundPreview.signal_expose_event().connect(sigc::mem_fun(this, &View_Gtk_Settings::signal_redraw_preview));
++ 
++ 	this->add_button(Gtk::Stock::CLOSE, Gtk::RESPONSE_CLOSE);
++ 	this->set_default_size(500, 600);
++@@ -337,9 +337,9 @@
++ void View_Gtk_Settings::addEntryToDefaultEntryChooser(std::string const& labelPathValue, std::string const& labelPathLabel, std::string const& numericPathValue, std::string const& numericPathLabel){
++ 	event_lock = true;
++ 	this->defEntryValueMapping[this->defEntryValueMapping.size()] = numericPathValue;
++-	cbDefEntry.append(Glib::ustring::compose(gettext("Entry %1 (by position)"), numericPathLabel));
+++	cbDefEntry.append_text(Glib::ustring::compose(gettext("Entry %1 (by position)"), numericPathLabel));
++ 	this->defEntryValueMapping[this->defEntryValueMapping.size()] = labelPathValue;
++-	cbDefEntry.append(labelPathLabel);
+++	cbDefEntry.append_text(labelPathLabel);
++ 	cbDefEntry.set_active(0);
++ 	this->groupDefaultEntry.set_sensitive(true);
++ 	event_lock = false;
++@@ -347,7 +347,7 @@
++ 
++ void View_Gtk_Settings::clearDefaultEntryChooser(){
++ 	event_lock = true;
++-	cbDefEntry.remove_all();
+++	cbDefEntry.clear_items();
++ 	this->defEntryValueMapping.clear();
++ 	this->groupDefaultEntry.set_sensitive(false); //if there's no entry to select, disable this area
++ 	event_lock = false;
++@@ -355,10 +355,10 @@
++ 
++ 
++ void View_Gtk_Settings::clearResolutionChooser(){
++-	this->cbResolution.remove_all();
+++	this->cbResolution.clear_items();
++ }
++ void View_Gtk_Settings::addResolution(std::string const& resolution){
++-	this->cbResolution.append(resolution);
+++	this->cbResolution.append_text(resolution);
++ }
++ 
++ View_Gtk_Settings::AdvancedSettingsTreeModel::AdvancedSettingsTreeModel(){
++@@ -539,7 +539,7 @@
++ 				Cairo::RefPtr<Cairo::Context> context = cr ? *cr : drwBackgroundPreview.get_window()->create_cairo_context();
++ 
++ 				drwBackgroundPreview.show();
++-				Gdk::Cairo::set_source_pixbuf(context, buf);
+++				Gdk::Cairo::set_source_pixbuf(context, buf, 0, 0);
++ 				context->rectangle(0, 0, buf->get_width(), buf->get_height());
++ 				context->fill();
++ 
++@@ -574,9 +574,9 @@
++ 		}
++ 		catch (Glib::Error const& e){
++ 			Cairo::RefPtr<Cairo::Context> context = cr ? *cr : drwBackgroundPreview.get_window()->create_cairo_context();
++-			Glib::RefPtr<Gdk::Pixbuf> buf = drwBackgroundPreview.render_icon_pixbuf(Gtk::Stock::MISSING_IMAGE, Gtk::ICON_SIZE_DIALOG);
+++			Glib::RefPtr<Gdk::Pixbuf> buf = drwBackgroundPreview.render_icon(Gtk::Stock::MISSING_IMAGE, Gtk::ICON_SIZE_DIALOG);
++ 
++-			Gdk::Cairo::set_source_pixbuf(context, buf);
+++			Gdk::Cairo::set_source_pixbuf(context, buf, 0, 0);
++ 			context->rectangle(0, 0, buf->get_width(), buf->get_height());
++ 			context->fill();
++ 		}
++@@ -769,9 +769,9 @@
++ 		this->eventListener->removeCustomSettingAction((Glib::ustring)(*tvAllEntries.get_selection()->get_selected())[asTreeModel.name]);
++ }
++ 
++-bool View_Gtk_Settings::signal_redraw_preview(const Cairo::RefPtr<Cairo::Context>& cr) {
+++bool View_Gtk_Settings::signal_redraw_preview(GdkEventExpose* event) {
++ 	if (!event_lock) {
++-		this->redraw(this->backgroundImagePath, false, &cr);
+++		this->redraw(this->backgroundImagePath, false);
++ 	}
++ 	return true;
++ }
++diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' '--exclude=.hg' '--exclude=_darcs' '--exclude=.bzr' gtkmm3_new~/src/View/Gtk/Settings.h gtkmm3_new/src/View/Gtk/Settings.h
++--- gtkmm3_new~/src/View/Gtk/Settings.h	2012-09-17 00:11:17.000000000 +0200
+++++ gtkmm3_new/src/View/Gtk/Settings.h	2012-09-17 00:07:28.742000000 +0200
++@@ -92,7 +92,7 @@
++ 	Gtk::VBox vbDefaultEntry;
++ 	Gtk::HBox hbDefPredefined;
++ 	//Gtk::SpinButton spDefPosition;
++-	Gtk::ComboBoxText cbDefEntry;
+++	Gtk::ComboBoxEntryText cbDefEntry;
++ 	std::map<int, std::string> defEntryValueMapping;
++ 	
++ 	//view group
++@@ -118,7 +118,7 @@
++ 	Gtk::Alignment alignResolution;
++ 	Gtk::HBox hbResolution;
++ 	Gtk::CheckButton chkResolution;
++-	Gtk::ComboBoxText cbResolution;
+++	Gtk::ComboBoxEntryText cbResolution;
++ 	
++ 	//color chooser
++ 	Gtk::Frame groupColorChooser;
++@@ -173,7 +173,7 @@
++ 	void signal_font_removed();
++ 	void signal_other_image_chosen();
++ 	void signal_bttRemoveBackground_clicked();
++-	bool signal_redraw_preview(const Cairo::RefPtr<Cairo::Context>& cr);
+++	bool signal_redraw_preview(GdkEventExpose* event);
++ 	void on_response(int response_id);
++ 	public:
++ 	View_Gtk_Settings();
++diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' '--exclude=.hg' '--exclude=_darcs' '--exclude=.bzr' gtkmm3_new~/src/View/Gtk/Trash.cpp gtkmm3_new/src/View/Gtk/Trash.cpp
++--- gtkmm3_new~/src/View/Gtk/Trash.cpp	2012-09-17 00:11:17.000000000 +0200
+++++ gtkmm3_new/src/View/Gtk/Trash.cpp	2012-09-17 00:07:28.742000000 +0200
++@@ -88,7 +88,7 @@
++ void View_Gtk_Trash::addItem(std::string const& name, bool isPlaceholder, std::string const& scriptName, void* relatedEntry){
++ 	Gtk::TreeModel::iterator iter = this->listStore->append();
++ 	(*iter)[iconModel.name] = name;
++-	(*iter)[iconModel.icon] = this->iconBox.render_icon_pixbuf(isPlaceholder ? Gtk::Stock::FIND : Gtk::Stock::EXECUTE, Gtk::ICON_SIZE_DND);
+++	(*iter)[iconModel.icon] = this->iconBox.render_icon(isPlaceholder ? Gtk::Stock::FIND : Gtk::Stock::EXECUTE, Gtk::ICON_SIZE_DND);
++ 	(*iter)[iconModel.description] = name + "\n" + gettext("type: ") + (isPlaceholder ? gettext("placeholder") : gettext("menuentry")) + "\n" + gettext("script: ") + scriptName;
++ 	(*iter)[iconModel.relatedRule] = relatedEntry;
++ }
+diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' '--exclude=.hg' '--exclude=_darcs' '--exclude=.bzr' GrubCustomizer~/src/View/Gtk/Element/List.h GrubCustomizer/src/View/Gtk/Element/List.h
+--- GrubCustomizer~/src/View/Gtk/Element/List.h	2013-12-12 21:46:44.000000000 +0100
++++ GrubCustomizer/src/View/Gtk/Element/List.h	2013-12-12 21:55:44.025000000 +0100
+@@ -65,10 +65,12 @@
+ 	Gtk::CellRendererToggle toggleRenderer;
+ 	Gtk::CellRendererText textRenderer;
+ 	Gtk::TreeViewColumn mainColumn;
++	Gtk::TreeViewColumn toggleColumn;
+ 	Pango::EllipsizeMode ellipsizeMode;
++	bool toggleColumnVisible;
+ 
+ 	View_Gtk_Element_List()
+-		: ellipsizeMode(Pango::ELLIPSIZE_NONE)
++		: ellipsizeMode(Pango::ELLIPSIZE_NONE), toggleColumnVisible(false)
+ 	{
+ 		refTreeStore = Gtk::TreeStore::create(treeModel);
+ 		this->set_model(refTreeStore);
+@@ -76,10 +78,10 @@
+ 		this->append_column(this->mainColumn);
+ 		this->mainColumn.pack_start(pixbufRenderer, false);
+ 		this->mainColumn.add_attribute(pixbufRenderer.property_pixbuf(), treeModel.icon);
+-		this->mainColumn.pack_start(toggleRenderer, false);
+-		this->mainColumn.add_attribute(toggleRenderer.property_sensitive(), treeModel.is_sensitive);
++		this->toggleColumn.pack_start(toggleRenderer, false);
++		this->toggleColumn.add_attribute(toggleRenderer.property_sensitive(), treeModel.is_sensitive);
+ 		toggleRenderer.set_visible(false);
+-		this->mainColumn.add_attribute(toggleRenderer.property_active(), treeModel.is_activated);
++		this->toggleColumn.add_attribute(toggleRenderer.property_active(), treeModel.is_activated);
+ 		this->mainColumn.pack_start(this->textRenderer, true);
+ 		this->mainColumn.add_attribute(this->textRenderer.property_markup(), treeModel.text);
+ 		this->mainColumn.add_attribute(this->textRenderer.property_editable(), treeModel.is_renamable);
+@@ -92,6 +94,20 @@
+ 		this->set_rubber_banding(true);
+ 	}
+ 
++	void setToggleColumnVisible(bool value) {
++		if (value == true && !this->toggleColumnVisible) {
++			this->remove_column(this->mainColumn);
++			this->append_column(this->toggleColumn);
++			this->append_column(this->mainColumn);
++		}
++
++		if (value == false && this->toggleColumnVisible) {
++			this->remove_column(this->toggleColumn);
++		}
++
++		this->toggleColumnVisible = value;
++	}
++
+ 	void addListItem(View_Model_ListItem<TItem, TWrapper> const& listItem, std::map<ViewOption, bool> const& options, Gtk::Window& window) {
+ 		if (!listItem.isVisible && !options.at(VIEW_SHOW_HIDDEN_ENTRIES)) {
+ 			return;
+@@ -147,13 +163,13 @@
+ 		}
+ 
+ 		if (listItem.scriptPtr != NULL) {
+-			icon = window.render_icon_pixbuf(Gtk::Stock::FILE, options.at(VIEW_SHOW_DETAILS) ? Gtk::ICON_SIZE_LARGE_TOOLBAR : Gtk::ICON_SIZE_MENU);
++			icon = window.render_icon(Gtk::Stock::FILE, options.at(VIEW_SHOW_DETAILS) ? Gtk::ICON_SIZE_LARGE_TOOLBAR : Gtk::ICON_SIZE_MENU);
+ 		} else if (listItem.is_submenu) {
+-			icon = window.render_icon_pixbuf(Gtk::Stock::DIRECTORY, options.at(VIEW_SHOW_DETAILS) ? Gtk::ICON_SIZE_LARGE_TOOLBAR : Gtk::ICON_SIZE_MENU);
++			icon = window.render_icon(Gtk::Stock::DIRECTORY, options.at(VIEW_SHOW_DETAILS) ? Gtk::ICON_SIZE_LARGE_TOOLBAR : Gtk::ICON_SIZE_MENU);
+ 		} else if (listItem.is_placeholder) {
+-			icon = window.render_icon_pixbuf(Gtk::Stock::FIND, options.at(VIEW_SHOW_DETAILS) ? Gtk::ICON_SIZE_LARGE_TOOLBAR : Gtk::ICON_SIZE_MENU);
++			icon = window.render_icon(Gtk::Stock::FIND, options.at(VIEW_SHOW_DETAILS) ? Gtk::ICON_SIZE_LARGE_TOOLBAR : Gtk::ICON_SIZE_MENU);
+ 		} else {
+-			icon = window.render_icon_pixbuf(Gtk::Stock::EXECUTE, options.at(VIEW_SHOW_DETAILS) ? Gtk::ICON_SIZE_LARGE_TOOLBAR : Gtk::ICON_SIZE_MENU);
++			icon = window.render_icon(Gtk::Stock::EXECUTE, options.at(VIEW_SHOW_DETAILS) ? Gtk::ICON_SIZE_LARGE_TOOLBAR : Gtk::ICON_SIZE_MENU);
+ 		}
+ 
+ 		if (listItem.isModified) {
+diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' '--exclude=.hg' '--exclude=_darcs' '--exclude=.bzr' GrubCustomizer~/src/View/Gtk/Element/PartitionChooser.cpp GrubCustomizer/src/View/Gtk/Element/PartitionChooser.cpp
+--- GrubCustomizer~/src/View/Gtk/Element/PartitionChooser.cpp	2013-11-07 21:53:24.000000000 +0100
++++ GrubCustomizer/src/View/Gtk/Element/PartitionChooser.cpp	2012-09-17 00:07:28.742000000 +0200
+@@ -43,16 +43,16 @@
+ }
+ 
+ void View_Gtk_Element_PartitionChooser::load(){
+-	this->remove_all();
++	this->clear_items();
+ 	if (prependCurrentPartition) {
+-		this->append(currentPartitionName + "\n(" + gettext("current") + ")");
++		this->append_text(currentPartitionName + "\n(" + gettext("current") + ")");
+ 		this->set_active(0);
+ 	}
+ 	for (Model_DeviceDataListInterface::const_iterator iter = deviceDataList->begin(); iter != deviceDataList->end(); iter++) {
+ 		if (iter->second.find("UUID") != iter->second.end()) {
+ 			Glib::ustring text = iter->first + "\n(" + (iter->second.find("LABEL") != iter->second.end() ? iter->second.at("LABEL") + ", " : "") + (iter->second.find("TYPE") != iter->second.end() ? iter->second.at("TYPE") : "") + ")";
+ 			uuid_map[text] = iter->second.at("UUID");
+-			this->append(text);
++			this->append_text(text);
+ 			if (strToLower(iter->second.at("UUID")) == strToLower(activePartition_uuid) || (activePartition_uuid == "" && iter == deviceDataList->begin() && !prependCurrentPartition)) {
+ 				this->set_active_text(text);
+ 			}
+diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' '--exclude=.hg' '--exclude=_darcs' '--exclude=.bzr' GrubCustomizer~/src/View/Gtk/EntryEditor.cpp GrubCustomizer/src/View/Gtk/EntryEditor.cpp
+--- GrubCustomizer~/src/View/Gtk/EntryEditor.cpp	2013-11-07 21:53:24.000000000 +0100
++++ GrubCustomizer/src/View/Gtk/EntryEditor.cpp	2013-11-14 21:17:11.959000000 +0100
+@@ -162,11 +162,11 @@
+ }
+ 
+ void View_Gtk_EntryEditor::setAvailableEntryTypes(std::list<std::string> const& names) {
+-	this->cbType.remove_all();
++	this->cbType.clear_items();
+ 	for (std::list<std::string>::const_iterator iter = names.begin(); iter != names.end(); iter++) {
+-		this->cbType.append(*iter);
++		this->cbType.append_text(*iter);
+ 	}
+-	this->cbType.append(gettext("Other"));
++	this->cbType.append_text(gettext("Other"));
+ }
+ 
+ void View_Gtk_EntryEditor::selectType(std::string const& name) {
+diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' '--exclude=.hg' '--exclude=_darcs' '--exclude=.bzr' GrubCustomizer~/src/View/Gtk/EnvEditor.cpp GrubCustomizer/src/View/Gtk/EnvEditor.cpp
+--- GrubCustomizer~/src/View/Gtk/EnvEditor.cpp	2013-11-07 21:53:23.000000000 +0100
++++ GrubCustomizer/src/View/Gtk/EnvEditor.cpp	2013-11-14 21:17:11.959000000 +0100
+@@ -50,8 +50,8 @@
+ 	this->lblSubmountpoints.set_no_show_all(true);
+ 	this->scrSubmountpoints.set_no_show_all(true);
+ 
+-	this->cbType.append(gettext("Grub 2"));
+-	this->cbType.append(gettext("BURG"));
++	this->cbType.append_text(gettext("Grub 2"));
++	this->cbType.append_text(gettext("BURG"));
+ 	this->cbType.set_active(0);
+ 	this->cbType.signal_changed().connect(sigc::mem_fun(this, &View_Gtk_EnvEditor::signal_bootloaderType_changed));
+ 
+@@ -124,11 +124,11 @@
+ 
+ 		Glib::RefPtr<Gdk::Pixbuf> icon;
+ 		if (std::find(validProps.begin(), validProps.end(), iter->first) != validProps.end()) {
+-			icon = this->render_icon_pixbuf(Gtk::Stock::OK, Gtk::ICON_SIZE_BUTTON);
++			icon = this->render_icon(Gtk::Stock::OK, Gtk::ICON_SIZE_BUTTON);
+ 		} else if (std::find(requiredProps.begin(), requiredProps.end(), iter->first) != requiredProps.end()) {
+-			icon = this->render_icon_pixbuf(Gtk::Stock::DIALOG_ERROR, Gtk::ICON_SIZE_BUTTON);
++			icon = this->render_icon(Gtk::Stock::DIALOG_ERROR, Gtk::ICON_SIZE_BUTTON);
+ 		} else {
+-			icon = this->render_icon_pixbuf(Gtk::Stock::DIALOG_WARNING, Gtk::ICON_SIZE_BUTTON);
++			icon = this->render_icon(Gtk::Stock::DIALOG_WARNING, Gtk::ICON_SIZE_BUTTON);
+ 		}
+ 
+ 		img->set(icon);
+diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' '--exclude=.hg' '--exclude=_darcs' '--exclude=.bzr' GrubCustomizer~/src/View/Gtk/Main.cpp GrubCustomizer/src/View/Gtk/Main.cpp
+--- GrubCustomizer~/src/View/Gtk/Main.cpp	2013-12-11 21:42:10.000000000 +0100
++++ GrubCustomizer/src/View/Gtk/Main.cpp	2013-12-12 21:55:44.025000000 +0100
+@@ -83,8 +83,6 @@
+ 	
+ 	//toolbar
+ 	toolbar.append(tbttSave);
+-	Glib::RefPtr<Gtk::StyleContext> context = toolbar.get_style_context();
+-	context->add_class(GTK_STYLE_CLASS_PRIMARY_TOOLBAR);
+ 
+ 	tbttSave.set_is_important(true);
+ 	
+@@ -123,16 +121,6 @@
+ 	toolbar.append(ti_sep5);
+ 
+ 	ti_sep5.set_expand(true);
+-	ti_sep5.set_draw(false);
+-
+-	vs_sep1.set_margin_top(5);
+-	vs_sep1.set_margin_bottom(5);
+-	vs_sep2.set_margin_top(5);
+-	vs_sep2.set_margin_bottom(5);
+-	vs_sep3.set_margin_top(5);
+-	vs_sep3.set_margin_bottom(5);
+-	vs_sep4.set_margin_top(5);
+-	vs_sep4.set_margin_bottom(5);
+ 
+ 	toolbar.append(tbttRevert);
+ 	tbttRevert.set_is_important(true);
+@@ -330,7 +318,7 @@
+ }
+ 
+ void View_Gtk_Main::signal_key_press(GdkEventKey* key) {
+-	if (key->keyval == GDK_KEY_Delete) {
++	if (key->keyval == 0xffff) {
+ 		this->controller->removeRulesAction(this->getSelectedRules());
+ 	}
+ }
+@@ -350,7 +338,7 @@
+ 	}
+ }
+ 
+-void View_Gtk_Main::signal_tab_changed(Gtk::Widget* page, guint page_num) {
++void View_Gtk_Main::signal_tab_changed(GtkNotebookPage* page, guint page_num) {
+ 	if (this->controller && this->lock_state == 0) { // this->eventListener must be called because this event may be propagated from bootstrap
+ 		this->controller->refreshTabAction(page_num);
+ 	}
+@@ -626,6 +614,9 @@
+ 
+ void View_Gtk_Main::signal_checkbox_toggled(Glib::ustring const& path) {
+ 	if (!this->lock_state) {
++		if ((*this->tvConfList.refTreeStore->get_iter(path))[this->tvConfList.treeModel.is_sensitive] == false) {
++			return;
++		}
+ 		this->controller->entryStateToggledAction(
+ 			(*this->tvConfList.refTreeStore->get_iter(path))[this->tvConfList.treeModel.relatedRule],
+ 			!(*this->tvConfList.refTreeStore->get_iter(path))[this->tvConfList.treeModel.is_activated]
+@@ -710,6 +701,7 @@
+ 	case VIEW_SHOW_HIDDEN_ENTRIES:
+ 		this->miShowHiddenEntries.set_active(value);
+ 		this->tvConfList.toggleRenderer.set_visible(value);
++		this->tvConfList.setToggleColumnVisible(value);
+ 		this->tvConfList.pixbufRenderer.set_visible(!value);
+ 		break;
+ 	case VIEW_GROUP_BY_SCRIPT: this->miGroupByScript.set_active(value); break;
+diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' '--exclude=.hg' '--exclude=_darcs' '--exclude=.bzr' GrubCustomizer~/src/View/Gtk/Main.h GrubCustomizer/src/View/Gtk/Main.h
+--- GrubCustomizer~/src/View/Gtk/Main.h	2013-12-11 21:38:55.000000000 +0100
++++ GrubCustomizer/src/View/Gtk/Main.h	2013-12-12 21:55:44.025000000 +0100
+@@ -178,7 +178,7 @@
+ 	void signal_key_press(GdkEventKey* key);
+ 	void signal_revert();
+ 	void signal_reload_recommendation_response(int response_id);
+-	void signal_tab_changed(Gtk::Widget* page, guint page_num);
++	void signal_tab_changed(GtkNotebookPage* page, guint page_num);
+ 	void signal_viewopt_details_toggled();
+ 	void signal_viewopt_checkboxes_toggled();
+ 	void signal_viewopt_script_toggled();
+diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' '--exclude=.hg' '--exclude=_darcs' '--exclude=.bzr' GrubCustomizer~/src/View/Gtk/Settings.cpp GrubCustomizer/src/View/Gtk/Settings.cpp
+--- GrubCustomizer~/src/View/Gtk/Settings.cpp	2013-12-11 21:37:20.000000000 +0100
++++ GrubCustomizer/src/View/Gtk/Settings.cpp	2013-11-14 21:17:11.959000000 +0100
+@@ -31,7 +31,7 @@
+ 	lblDefaultEntry(gettext("default entry")), lblView(gettext("visibility")), chkShowMenu(gettext("show menu")),
+ 	lblKernelParams(gettext("kernel parameters")),
+ 	chkGenerateRecovery(gettext("generate recovery entries")), chkOsProber(gettext("look for other operating systems")),
+-	chkResolution(gettext("custom resolution: ")), cbResolution(true),
++	chkResolution(gettext("custom resolution: ")),
+ 	imgDefaultEntryHelp(Gtk::Stock::HELP, Gtk::ICON_SIZE_BUTTON)
+ {
+ 	this->set_title("Grub Customizer - "+Glib::ustring(gettext("settings")));
+@@ -150,7 +150,7 @@
+ 	hbResolutionAndTheme.pack_start(hbResolution);
+ 	hbResolution.pack_start(chkResolution, Gtk::PACK_SHRINK);
+ 	hbResolution.pack_start(cbResolution, Gtk::PACK_EXPAND_WIDGET);
+-	cbResolution.append("saved");
++	cbResolution.append_text("saved");
+ 
+ 
+ 	//<signals>
+@@ -200,9 +200,9 @@
+ void View_Gtk_Settings::addEntryToDefaultEntryChooser(std::string const& labelPathValue, std::string const& labelPathLabel, std::string const& numericPathValue, std::string const& numericPathLabel){
+ 	event_lock = true;
+ 	this->defEntryValueMapping[this->defEntryValueMapping.size()] = numericPathValue;
+-	cbDefEntry.append(Glib::ustring::compose(gettext("Entry %1 (by position)"), numericPathLabel));
++	cbDefEntry.append_text(Glib::ustring::compose(gettext("Entry %1 (by position)"), numericPathLabel));
+ 	this->defEntryValueMapping[this->defEntryValueMapping.size()] = labelPathValue;
+-	cbDefEntry.append(labelPathLabel);
++	cbDefEntry.append_text(labelPathLabel);
+ 	cbDefEntry.set_active(0);
+ 	this->groupDefaultEntry.set_sensitive(true);
+ 	event_lock = false;
+@@ -210,7 +210,7 @@
+ 
+ void View_Gtk_Settings::clearDefaultEntryChooser(){
+ 	event_lock = true;
+-	cbDefEntry.remove_all();
++	cbDefEntry.clear_items();
+ 	this->defEntryValueMapping.clear();
+ 	this->groupDefaultEntry.set_sensitive(false); //if there's no entry to select, disable this area
+ 	event_lock = false;
+@@ -218,10 +218,10 @@
+ 
+ 
+ void View_Gtk_Settings::clearResolutionChooser(){
+-	this->cbResolution.remove_all();
++	this->cbResolution.clear_items();
+ }
+ void View_Gtk_Settings::addResolution(std::string const& resolution){
+-	this->cbResolution.append(resolution);
++	this->cbResolution.append_text(resolution);
+ }
+ 
+ View_Gtk_Settings::AdvancedSettingsTreeModel::AdvancedSettingsTreeModel(){
+@@ -519,4 +519,3 @@
+ 
+ 
+ 
+-
+diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' '--exclude=.hg' '--exclude=_darcs' '--exclude=.bzr' GrubCustomizer~/src/View/Gtk/Settings.h GrubCustomizer/src/View/Gtk/Settings.h
+--- GrubCustomizer~/src/View/Gtk/Settings.h	2013-12-11 21:37:20.000000000 +0100
++++ GrubCustomizer/src/View/Gtk/Settings.h	2013-11-14 21:17:11.959000000 +0100
+@@ -71,7 +71,7 @@
+ 	Gtk::VBox vbDefaultEntry;
+ 	Gtk::HBox hbDefPredefined;
+ 	//Gtk::SpinButton spDefPosition;
+-	Gtk::ComboBoxText cbDefEntry;
++	Gtk::ComboBoxEntryText cbDefEntry;
+ 	std::map<int, std::string> defEntryValueMapping;
+ 	Gtk::Button bttDefaultEntryHelp;
+ 	Gtk::Image imgDefaultEntryHelp;
+@@ -100,7 +100,7 @@
+ 	Gtk::HBox hbResolutionAndTheme;
+ 	Gtk::HBox hbResolution;
+ 	Gtk::CheckButton chkResolution;
+-	Gtk::ComboBoxText cbResolution;
++	Gtk::ComboBoxEntryText cbResolution;
+ 
+ 
+ 	void signal_setting_row_changed(const Gtk::TreeModel::Path& path, const Gtk::TreeModel::iterator& iter);
+diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' '--exclude=.hg' '--exclude=_darcs' '--exclude=.bzr' GrubCustomizer~/src/View/Gtk/Theme.cpp GrubCustomizer/src/View/Gtk/Theme.cpp
+--- GrubCustomizer~/src/View/Gtk/Theme.cpp	2013-11-26 23:02:43.000000000 +0100
++++ GrubCustomizer/src/View/Gtk/Theme.cpp	2013-11-15 00:13:35.606000000 +0100
+@@ -110,7 +110,6 @@
+ 	hbFileSelection.set_border_width(5);
+ 	hbFileSelection.set_spacing(5);
+ 
+-	scrFiles.set_min_content_width(200);
+ 	scrFiles.set_shadow_type(Gtk::SHADOW_IN);
+ 	scrFiles.set_policy(Gtk::POLICY_AUTOMATIC, Gtk::POLICY_AUTOMATIC);
+ 
+@@ -120,19 +119,17 @@
+ 	frmThemeEditor.set_no_show_all(true);
+ 	hpThemeEditor.set_border_width(5);
+ 
+-	Glib::RefPtr<Gtk::FileFilter> fileFilter = Gtk::FileFilter::create();
+-	fileFilter->add_mime_type("application/x-gzip");
+-	fileFilter->add_mime_type("application/x-tar");
+-	fileFilter->add_mime_type("application/x-bzip2");
+-	fileFilter->add_pattern("*.tar.gz");
+-	fileFilter->add_pattern("*.tar");
+-	fileFilter->add_pattern("*.tar.bz2");
+-	fileFilter->set_name(gettext("Archive files"));
++	fileFilter.add_mime_type("application/x-gzip");
++	fileFilter.add_mime_type("application/x-tar");
++	fileFilter.add_mime_type("application/x-bzip2");
++	fileFilter.add_pattern("*.tar.gz");
++	fileFilter.add_pattern("*.tar");
++	fileFilter.add_pattern("*.tar.bz2");
++	fileFilter.set_name(gettext("Archive files"));
+ 	fcThemeFileChooser.add_filter(fileFilter);
+ 
+-	Glib::RefPtr<Gtk::FileFilter> fileFilterAll = Gtk::FileFilter::create();
+-	fileFilterAll->add_pattern("*");
+-	fileFilterAll->set_name(gettext("All files"));
++	fileFilterAll.add_pattern("*");
++	fileFilterAll.set_name(gettext("All files"));
+ 	fcThemeFileChooser.add_filter(fileFilterAll);
+ 
+ 	//theme selection
+@@ -229,7 +226,7 @@
+ 	fcBackgroundImage.signal_file_set().connect(sigc::mem_fun(this, &View_Gtk_Theme::signal_other_image_chosen));
+ 	bttRemoveBackground.signal_clicked().connect(sigc::mem_fun(this, &View_Gtk_Theme::signal_bttRemoveBackground_clicked));
+ 
+-	drwBackgroundPreview.signal_draw().connect(sigc::mem_fun(this, &View_Gtk_Theme::signal_redraw_preview));
++	drwBackgroundPreview.signal_expose_event().connect(sigc::mem_fun(this, &View_Gtk_Theme::signal_redraw_preview));
+ }
+ 
+ View_Gtk_Theme_ColorChooser::Columns::Columns(){
+@@ -323,7 +320,7 @@
+ 
+ void View_Gtk_Theme::addFile(std::string const& fileName) {
+ 	event_lock = true;
+-	lvFiles.append(fileName);
++	lvFiles.append_text(fileName);
+ 	event_lock = false;
+ }
+ 
+@@ -375,14 +372,14 @@
+ }
+ 
+ void View_Gtk_Theme::addTheme(std::string const& name) {
+-	this->cbTheme.append(name);
++	this->cbTheme.append_text(name);
+ }
+ 
+ void View_Gtk_Theme::clearThemeSelection() {
+ 	event_lock = true;
+-	this->cbTheme.remove_all();
++	this->cbTheme.clear_items();
+ 
+-	cbTheme.append(gettext("(Custom Settings)"));
++	cbTheme.append_text(gettext("(Custom Settings)"));
+ 	cbTheme.set_active(0);
+ 	event_lock = false;
+ }
+@@ -547,7 +544,7 @@
+ 				Cairo::RefPtr<Cairo::Context> context = cr ? *cr : drwBackgroundPreview.get_window()->create_cairo_context();
+ 
+ 				drwBackgroundPreview.show();
+-				Gdk::Cairo::set_source_pixbuf(context, buf);
++				Gdk::Cairo::set_source_pixbuf(context, buf, 0, 0);
+ 				context->rectangle(0, 0, buf->get_width(), buf->get_height());
+ 				context->fill();
+ 
+@@ -582,9 +579,9 @@
+ 		}
+ 		catch (Glib::Error const& e){
+ 			Cairo::RefPtr<Cairo::Context> context = cr ? *cr : drwBackgroundPreview.get_window()->create_cairo_context();
+-			Glib::RefPtr<Gdk::Pixbuf> buf = drwBackgroundPreview.render_icon_pixbuf(Gtk::Stock::MISSING_IMAGE, Gtk::ICON_SIZE_DIALOG);
++			Glib::RefPtr<Gdk::Pixbuf> buf = drwBackgroundPreview.render_icon(Gtk::Stock::MISSING_IMAGE, Gtk::ICON_SIZE_DIALOG);
+ 
+-			Gdk::Cairo::set_source_pixbuf(context, buf);
++			Gdk::Cairo::set_source_pixbuf(context, buf, 0, 0);
+ 			context->rectangle(0, 0, buf->get_width(), buf->get_height());
+ 			context->fill();
+ 		}
+@@ -626,9 +623,9 @@
+ 	return this->vbMain;
+ }
+ 
+-bool View_Gtk_Theme::signal_redraw_preview(const Cairo::RefPtr<Cairo::Context>& cr) {
++bool View_Gtk_Theme::signal_redraw_preview(GdkEventExpose* event) {
+ 	if (!event_lock) {
+-		this->redraw(this->backgroundImagePath, false, &cr);
++		this->redraw(this->backgroundImagePath, false);
+ 	}
+ 	return true;
+ }
+diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' '--exclude=.hg' '--exclude=_darcs' '--exclude=.bzr' GrubCustomizer~/src/View/Gtk/Theme.h GrubCustomizer/src/View/Gtk/Theme.h
+--- GrubCustomizer~/src/View/Gtk/Theme.h	2013-11-07 21:53:23.000000000 +0100
++++ GrubCustomizer/src/View/Gtk/Theme.h	2013-11-14 21:17:11.959000000 +0100
+@@ -127,6 +127,8 @@
+ 	Gtk::Button bttCopyBackground, bttRemoveBackground;
+ 	Gtk::Image imgRemoveBackground;
+ 
++	Gtk::FileFilter fileFilter;
++	Gtk::FileFilter fileFilterAll;
+ 
+ 	bool event_lock;
+ 	std::string _getSelectedFileName();
+@@ -182,7 +184,7 @@
+ 	void signal_other_image_chosen();
+ 	void signal_help_click();
+ 	void signal_bttRemoveBackground_clicked();
+-	bool signal_redraw_preview(const Cairo::RefPtr<Cairo::Context>& cr);
++	bool signal_redraw_preview(GdkEventExpose* event);
+ };
+ 
+ 
+diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' '--exclude=.hg' '--exclude=_darcs' '--exclude=.bzr' GrubCustomizer~/src/View/Gtk/Trash.cpp GrubCustomizer/src/View/Gtk/Trash.cpp
+--- GrubCustomizer~/src/View/Gtk/Trash.cpp	2013-11-07 21:53:23.000000000 +0100
++++ GrubCustomizer/src/View/Gtk/Trash.cpp	2013-11-14 21:17:11.959000000 +0100
+@@ -37,7 +37,6 @@
+ 	hbList.pack_start(bttRestore);
+ 	hbList.pack_start(bttDelete);
+ 	scrEntryBox.add(list);
+-	scrEntryBox.set_min_content_width(250);
+ 	
+ 	bttRestore.set_label(gettext("_Restore"));
+ 	bttRestore.set_use_underline(true);

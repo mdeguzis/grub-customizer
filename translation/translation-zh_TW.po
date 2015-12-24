@@ -1,0 +1,859 @@
+# Chinese (Traditional) translation for grub-customizer
+# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
+# This file is distributed under the same license as the grub-customizer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: grub-customizer\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2013-11-13 22:24+0100\n"
+"PO-Revision-Date: 2014-03-01 04:20+0000\n"
+"Last-Translator: Walter Cheuk <wwycheuk@gmail.com>\n"
+"Language-Team: Chinese (Traditional) <zh_TW@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2014-04-16 18:08+0000\n"
+"X-Generator: Launchpad (build 16985)\n"
+
+#: src/Controller/MainControllerImpl.cpp:654
+msgid "Name the Entry"
+msgstr "命名該項目"
+
+#: src/Controller/MainControllerImpl.cpp:736
+msgid "cannot move this entry"
+msgstr "不能移動這個項目"
+
+#: src/Controller/MainControllerImpl.cpp:829
+msgid "Configuration has been saved"
+msgstr "配置已被儲存"
+
+#: src/Controller/MainControllerImpl.cpp:834
+msgid "updating configuration"
+msgstr "更新配置"
+
+#: src/main/gtk-client.cpp:251
+msgid "Linux"
+msgstr "Linux"
+
+#: src/main/gtk-client.cpp:252
+msgid "Linux-ISO"
+msgstr "Linux-ISO"
+
+#: src/main/gtk-client.cpp:253
+msgid "Chainloader"
+msgstr "Chainloader"
+
+#: src/main/gtk-client.cpp:254
+msgid "Memtest"
+msgstr "記憶體檢測"
+
+#: src/View/Gtk/About.cpp:36
+msgid ""
+"Grub Customizer is a graphical interface to configure the grub2/burg settings"
+msgstr "Grub Customizer 是用來設置 grub2/burg 設定的圖形介面程式"
+
+#: src/View/Gtk/Element/PartitionChooser.cpp:48
+msgid "current"
+msgstr "目前"
+
+#: src/View/Gtk/EntryEditor.cpp:22 src/View/Gtk/EnvEditor.cpp:23
+msgid "_Type:"
+msgstr "類型(_T)："
+
+#: src/View/Gtk/EntryEditor.cpp:28
+msgid "Entry editor"
+msgstr "項目編輯器"
+
+#: src/View/Gtk/EntryEditor.cpp:34
+msgid "Options"
+msgstr "選項"
+
+#: src/View/Gtk/EntryEditor.cpp:35
+msgid "Source"
+msgstr "來源"
+
+#: src/View/Gtk/EntryEditor.cpp:54
+msgid "_Partition"
+msgstr "分割區(_P)"
+
+#: src/View/Gtk/EntryEditor.cpp:56
+msgid "_Initial ramdisk"
+msgstr "虛擬檔案系統(_I)"
+
+#: src/View/Gtk/EntryEditor.cpp:58
+msgid "_Linux image"
+msgstr "_Linux 映像檔"
+
+#: src/View/Gtk/EntryEditor.cpp:60
+msgid "_Memtest image"
+msgstr "記憶體檢測映像檔(_M)"
+
+#: src/View/Gtk/EntryEditor.cpp:62
+msgid "Path to iso file"
+msgstr "到 ISO 檔的路徑"
+
+#: src/View/Gtk/EntryEditor.cpp:64
+msgid "Locale"
+msgstr "地域"
+
+#: src/View/Gtk/EntryEditor.cpp:66
+msgid "Kernel params"
+msgstr "內核參數"
+
+#: src/View/Gtk/EntryEditor.cpp:169 src/View/Gtk/EntryEditor.cpp:175
+#: src/View/Gtk/EntryEditor.cpp:209
+msgid "Other"
+msgstr "其他"
+
+#: src/View/Gtk/EnvEditor.cpp:22
+msgid "_Partition:"
+msgstr "分割區(_P)："
+
+#: src/View/Gtk/EnvEditor.cpp:23
+msgid "Submountpoints:"
+msgstr "子掛載點："
+
+#: src/View/Gtk/EnvEditor.cpp:24
+msgid "save this configuration"
+msgstr "儲存這個配置"
+
+#: src/View/Gtk/EnvEditor.cpp:53
+msgid "Grub 2"
+msgstr "Grub 2"
+
+#: src/View/Gtk/EnvEditor.cpp:54
+msgid "BURG"
+msgstr "BURG"
+
+#: src/View/Gtk/EnvEditor.cpp:210
+msgid "Mount failed!"
+msgstr "掛載失敗！"
+
+#: src/View/Gtk/EnvEditor.cpp:211
+msgid "umount failed!"
+msgstr "卸載失敗！"
+
+#: src/View/Gtk/EnvEditor.cpp:212
+msgid "This seems not to be a root file system (no fstab found)"
+msgstr "這似乎不是根檔案系統 (找不到 fstab)"
+
+#: src/View/Gtk/EnvEditor.cpp:213
+msgid "Couldn't mount the selected partition"
+msgstr "無法掛載選取的分割區"
+
+#: src/View/Gtk/EnvEditor.cpp:214
+msgid "Couldn't umount the selected partition"
+msgstr "無法卸載選取的分割區"
+
+#: src/View/Gtk/Error.cpp:26 src/View/Gtk/Error.cpp:28
+msgid "An error occurred"
+msgstr "有錯誤發生"
+
+#: src/View/Gtk/Error.cpp:27
+msgid ""
+"please Inform the author about this problem. The following information could "
+"be helpful:"
+msgstr "關於這個問題，請通知作者。下列資訊可能會有所幫助："
+
+#: src/View/Gtk/Error.cpp:31
+msgid "continue (risk data loss)"
+msgstr "繼續 (有可能遺失資料)"
+
+#: src/View/Gtk/Installer.cpp:22
+msgid ""
+"Install the bootloader to MBR and put some\n"
+"files to the bootloaders data directory\n"
+"(if they don't already exist)."
+msgstr ""
+"安裝開機載入程式至 MBR 及放一些\n"
+"檔案到開機載入程式資料目錄\n"
+"(如果還沒有的話)。"
+
+#: src/View/Gtk/Installer.cpp:23
+msgid "_Device: "
+msgstr "裝置(_D)： "
+
+#: src/View/Gtk/Installer.cpp:33
+msgid "Install to MBR"
+msgstr "安裝到 MBR"
+
+#: src/View/Gtk/Installer.cpp:50
+msgid "The bootloader has been installed successfully"
+msgstr "開機載入程式已經成功安裝"
+
+#: src/View/Gtk/Installer.cpp:55
+msgid "Error while installing the bootloader"
+msgstr "安裝開機載入程式時出現錯誤"
+
+#: src/View/Gtk/Installer.cpp:71
+msgid "installing the bootloader…"
+msgstr "正在安裝開機載入程式..."
+
+#: src/View/Gtk/Installer.cpp:76
+msgid "Please type a device string!"
+msgstr "請輸入裝置字串！"
+
+#: src/View/Gtk/Main.cpp:29
+msgid "_File"
+msgstr "檔案(_F)"
+
+#: src/View/Gtk/Main.cpp:31
+msgid "_Edit"
+msgstr "編輯(_E)"
+
+#: src/View/Gtk/Main.cpp:31
+msgid "_View"
+msgstr "檢視(_V)"
+
+#: src/View/Gtk/Main.cpp:31
+msgid "_Help"
+msgstr "求助(_H)"
+
+#: src/View/Gtk/Main.cpp:32
+msgid "_Install to MBR …"
+msgstr "安裝到 MBR(_I)..."
+
+#: src/View/Gtk/Main.cpp:41
+msgid "_Show details"
+msgstr "顯示詳情(_S)"
+
+#: src/View/Gtk/Main.cpp:41
+msgid "Show _hidden entries"
+msgstr "顯示隱藏項目(_H)"
+
+#: src/View/Gtk/Main.cpp:42
+msgid "_Group by Script"
+msgstr "依腳本分組(_G)"
+
+#: src/View/Gtk/Main.cpp:42
+msgid "Show _Placeholders"
+msgstr "顯示佔位符號(_P)"
+
+#: src/View/Gtk/Main.cpp:43
+msgid "BURG found!"
+msgstr "找到了 BURG！"
+
+#: src/View/Gtk/Main.cpp:44
+msgid "advanced settings"
+msgstr "進階設定"
+
+#: src/View/Gtk/Main.cpp:46
+msgid ""
+"The modifications you've done affects the visible entries. Please reload!"
+msgstr "您所做的修改影響可見的項目。 請重新載入！"
+
+#: src/View/Gtk/Main.cpp:47
+msgid "Script updates found. Click save to apply the changes!"
+msgstr "腳本有更新。按「儲存」套用變更！"
+
+#: src/View/Gtk/Main.cpp:60
+msgid "_List configuration"
+msgstr "清單配置(_L)"
+
+#: src/View/Gtk/Main.cpp:95
+msgid "Remove selected entries (you can restore them from trash)"
+msgstr "移除所選項目 (您可以將它們從回收筒還原)"
+
+#: src/View/Gtk/Main.cpp:105
+msgid "Move up the selected entry or script"
+msgstr "將選定的項目或腳本向上移動"
+
+#: src/View/Gtk/Main.cpp:107
+msgid "Move down the selected entry or script"
+msgstr "將選定的項目或腳本向下移動"
+
+#: src/View/Gtk/Main.cpp:113
+msgid "remove this entry from the current submenu"
+msgstr "從目前的子選單中，移除此項目"
+
+#: src/View/Gtk/Main.cpp:116
+msgid "add this entry to a new submenu"
+msgstr "加入這個項目到一新的子選單"
+
+#: src/View/Gtk/Main.cpp:139
+msgid "Reverts the list to the default order"
+msgstr "還原清單為預設順序"
+
+#: src/View/Gtk/Main.cpp:141
+msgid "reloads the configuration. Unsaved changes will be preserved."
+msgstr "重新載入配置。尚未儲存的變更將被保留。"
+
+#: src/View/Gtk/Main.cpp:185
+msgid "Rename"
+msgstr "重新命名"
+
+#: src/View/Gtk/Main.cpp:186 src/View/Gtk/Main.cpp:187
+msgid "Move up"
+msgstr "上移"
+
+#: src/View/Gtk/Main.cpp:188 src/View/Gtk/Main.cpp:189
+msgid "Move down"
+msgstr "下移"
+
+#: src/View/Gtk/Main.cpp:190 src/View/Gtk/Main.cpp:191
+msgid "Remove from submenu"
+msgstr "從子選單移除"
+
+#: src/View/Gtk/Main.cpp:192 src/View/Gtk/Main.cpp:193
+msgid "Create submenu"
+msgstr "建立子選單"
+
+#: src/View/Gtk/Main.cpp:208
+msgid "_Change Environment …"
+msgstr "變更環境(_C)..."
+
+#: src/View/Gtk/Main.cpp:215
+msgid "Do you want to configure BURG instead of grub2?"
+msgstr "您是否想要配置BURG，而不是grub2？"
+
+#: src/View/Gtk/Main.cpp:281
+msgid "_General settings"
+msgstr "一般設定(_G)"
+
+#: src/View/Gtk/Main.cpp:286
+msgid "_Appearance settings"
+msgstr "外觀設定(_A)"
+
+#: src/View/Gtk/Main.cpp:304
+msgid "BURG Mode"
+msgstr "BURG 模式"
+
+#: src/View/Gtk/Main.cpp:308
+msgid "Save configuration and generate a new "
+msgstr "儲存配置及產生一新的 "
+
+#: src/View/Gtk/Main.cpp:335
+msgid "Are you sure?"
+msgstr "您確定嗎？"
+
+#: src/View/Gtk/Main.cpp:336
+msgid "This removes all your list modifications of the bootloader menu!"
+msgstr "這將移除您開機選單中所有清單的修改！"
+
+#: src/View/Gtk/Main.cpp:429
+msgid "loading configuration…"
+msgstr "正在載入配置..."
+
+#: src/View/Gtk/Main.cpp:431
+msgid "loading script %2/%3 (%1)"
+msgstr "載入腳本 %2/%3 (%1)"
+
+#: src/View/Gtk/Main.cpp:444
+msgid "Proxy binary not found!"
+msgstr ""
+
+#: src/View/Gtk/Main.cpp:445
+msgid ""
+"You will see all entries (uncustomized) when you run grub. This error accurs "
+"(in most cases), when you didn't install grub gustomizer currectly."
+msgstr ""
+
+#: src/View/Gtk/Main.cpp:451
+msgid "(incoming Entries of %1, Script: %2)"
+msgstr "(進入項目 %1，腳本：%2)"
+
+#: src/View/Gtk/Main.cpp:453
+msgid "(incoming Entries of %1)"
+msgstr "(進入項目%1)"
+
+#: src/View/Gtk/Main.cpp:455
+msgid "(incoming Entries of Script: %1)"
+msgstr "(進入項目腳本：%1)"
+
+#: src/View/Gtk/Main.cpp:457
+msgid "(incoming Entries)"
+msgstr "(進入項目)"
+
+#: src/View/Gtk/Main.cpp:463
+msgid "(script code)"
+msgstr "(腳本代碼)"
+
+#: src/View/Gtk/Main.cpp:465
+msgid "(script code of %1)"
+msgstr "(腳本代碼 %1)"
+
+#: src/View/Gtk/Main.cpp:683
+msgid ""
+"Removing Script Code can cause problems when trying to boot entries relying "
+"on it. Are you sure you want to do it anyway?"
+msgstr "移除腳本代碼可能會導致當試圖啟動依賴於它的項目時發生問題。確定想這樣做嗎？"
+
+#: src/View/Gtk/Main.cpp:692
+msgid ""
+"You're trying to remove an entry of the currently running system. Make sure "
+"there are other working entries of this system!\n"
+"If you just want to remove old kernels: The better way is uninstalling them "
+"instead of just hiding them in boot menu."
+msgstr ""
+"正在移除正在運行的系統項目。請先確保本電腦有其他可正常運行的系統項目！\n"
+"如僅想移除舊內核，應將其解除安裝而非在開機選單隱藏。"
+
+#: src/View/Gtk/Main.cpp:806 src/View/Gtk/Element/List.h:128
+msgid "menuentry"
+msgstr "選單項目(menuentry)"
+
+#: src/View/Gtk/Main.cpp:807
+msgid ""
+"An menuentry which is visible at the grub menu and boots an operating system "
+"when activated."
+msgstr ""
+
+#: src/View/Gtk/Main.cpp:808 src/View/Gtk/Element/List.h:124
+msgid "submenu"
+msgstr "子選單(submenu)"
+
+#: src/View/Gtk/Main.cpp:809
+msgid ""
+"A group of other operating systems. Grub shows it as a normal menuentry "
+"however when clicking it, it loads another menu which allows you to choose "
+"one the the containing menuentries."
+msgstr ""
+
+#: src/View/Gtk/Main.cpp:811 src/View/Gtk/Element/List.h:126
+msgid "placeholder"
+msgstr "佔位符號"
+
+#: src/View/Gtk/Main.cpp:812
+msgid ""
+"There are two types of this special entry: Incoming entries are the place "
+"where Grub Customizer places new operating systems which are found by grub "
+"but still not configured using Grub Customizer. The Script code is code "
+"generated by grub which doesn't look like an menuentry. In most cases it's "
+"used to configure grub. You should only touch it when knowing what it does. "
+"Placeholders are hidden by default."
+msgstr ""
+"此特殊項目有兩種：Incoming entries are the place where Grub Customizer places new "
+"operating systems which are found by grub but still not configured using "
+"Grub Customizer. The Script code is code generated by grub which doesn't "
+"look like an menuentry. In most cases it's used to configure grub. You "
+"should only touch it when knowing what it does. 預設會隱藏佔位符號。"
+
+#: src/View/Gtk/Main.cpp:817 src/View/Gtk/Element/List.h:122
+msgid "script"
+msgstr "腳本(script)"
+
+#: src/View/Gtk/Main.cpp:818
+msgid ""
+"Scripts are generating menuentries. So every menuentry belongs to a script. "
+"They are shown as top level groups when activated. However in contrast to "
+"submenus they aren't shown at the boot menu."
+msgstr ""
+
+#: src/View/Gtk/Main.cpp:825
+msgid "About the entry types"
+msgstr "有關項目類型"
+
+#: src/View/Gtk/Main.cpp:887
+msgid "The saved configuration is not up to date!"
+msgstr "儲存的配置不是最新的！"
+
+#: src/View/Gtk/Main.cpp:888
+msgid ""
+"The generated configuration didn't equal to the saved configuration on "
+"startup. So what you see now may not be what you see when you restart your "
+"pc. To fix this, click update!"
+msgstr ""
+
+#: src/View/Gtk/Main.cpp:891
+msgid "_Quit without update"
+msgstr "結束而不更新(_Q)"
+
+#: src/View/Gtk/Main.cpp:894
+msgid "_Update & Quit"
+msgstr "更新及結束(_U)"
+
+#: src/View/Gtk/Main.cpp:898
+msgid "Do you want to save your modifications?"
+msgstr "是否要儲存所做的修改？"
+
+#: src/View/Gtk/Main.cpp:901
+msgid "_Quit without saving"
+msgstr "結束而不更新(_Q)"
+
+#: src/View/Gtk/Main.cpp:904
+msgid "_Save & Quit"
+msgstr "儲存及結束(_S)"
+
+#: src/View/Gtk/Main.cpp:907
+msgid "AND: your modifications are still unsaved, update will save them too!"
+msgstr "並且：您的修改仍未儲存，更新將連同儲存它們！"
+
+#: src/View/Gtk/Main.cpp:960
+msgid ""
+"%1 couldn't be executed successfully. error message:\n"
+" %2"
+msgstr ""
+"%1 無法成功執行。錯誤訊息：\n"
+" %2"
+
+#: src/View/Gtk/Main.cpp:962
+msgid "Environment settings"
+msgstr "環境設定"
+
+#: src/View/Gtk/Main.cpp:974
+msgid "Do you want to proceed without saving the current configuration?"
+msgstr "想繼續執行而不儲存目前配置嗎？"
+
+#: src/View/Gtk/Main.cpp:975
+msgid "There are unsaved modifications!"
+msgstr "有未儲存的修改！"
+
+#: src/View/Gtk/Settings.cpp:30
+msgid "pre_defined: "
+msgstr "預定(_D)： "
+
+#: src/View/Gtk/Settings.cpp:30
+msgid "previously _booted entry"
+msgstr "先前啟動的項目(_B)"
+
+#: src/View/Gtk/Settings.cpp:31
+msgid "default entry"
+msgstr "預設項目"
+
+#: src/View/Gtk/Settings.cpp:31
+msgid "visibility"
+msgstr "可見性"
+
+#: src/View/Gtk/Settings.cpp:31
+msgid "show menu"
+msgstr "顯示選單"
+
+#: src/View/Gtk/Settings.cpp:32
+msgid "kernel parameters"
+msgstr "內核參數"
+
+#: src/View/Gtk/Settings.cpp:33
+msgid "generate recovery entries"
+msgstr "產生復原項目"
+
+#: src/View/Gtk/Settings.cpp:33
+msgid "look for other operating systems"
+msgstr "尋找其他作業系統"
+
+#: src/View/Gtk/Settings.cpp:34
+msgid "custom resolution: "
+msgstr "自訂解析度： "
+
+#: src/View/Gtk/Settings.cpp:37
+msgid "settings"
+msgstr "設定"
+
+#: src/View/Gtk/Settings.cpp:41
+msgid "_General"
+msgstr "一般(_G)"
+
+#: src/View/Gtk/Settings.cpp:42
+msgid "A_ppearance"
+msgstr "外觀(_P)"
+
+#: src/View/Gtk/Settings.cpp:43
+msgid "_Advanced"
+msgstr "進階(_A)"
+
+#: src/View/Gtk/Settings.cpp:56
+msgid "is active"
+msgstr "啟用"
+
+#: src/View/Gtk/Settings.cpp:57
+msgid "name"
+msgstr "名稱"
+
+#: src/View/Gtk/Settings.cpp:58
+msgid "value"
+msgstr "值"
+
+#: src/View/Gtk/Settings.cpp:112
+msgid "Boot default entry after %1 Seconds"
+msgstr "在 %1 秒後以預設項目開機"
+
+#: src/View/Gtk/Settings.cpp:203
+msgid "Entry %1 (by position)"
+msgstr "項目 %1 (依位置)"
+
+#: src/View/Gtk/Settings.cpp:398
+msgid ""
+"This option doesn't work when the \"os-prober\" script finds other operating "
+"systems. Disable \"%1\" if you don't need to boot other operating systems."
+msgstr ""
+
+#: src/View/Gtk/Settings.cpp:493
+msgid ""
+"This option allows choosing the operating system which should be selected "
+"when booting. By default this always is the first one.\n"
+"\n"
+"There are two columns because there are two ways of selecting the default "
+"operating system. The first way is to say \"always select the operating "
+"system at position X\". This means when a new menuentry appears, the default "
+"menuentry may change (because there's another one at Position X).\n"
+"\n"
+"The other way is to say \"use the operating system named Linux 123\". Then "
+"it will always point to the same operating system - the position doesn't "
+"matter. When changing the name of an entry using Grub Customizer this option "
+"will be updated automatically. So you won't have to re-select the default "
+"entry."
+msgstr ""
+
+#: src/View/Gtk/Theme.cpp:22
+msgid "_Load file: "
+msgstr "載入檔案(_L)： "
+
+#: src/View/Gtk/Theme.cpp:24
+msgid "_Theme:"
+msgstr "佈景主題(_T)："
+
+#: src/View/Gtk/Theme.cpp:24
+msgid "background image"
+msgstr "背景圖片"
+
+#: src/View/Gtk/Theme.cpp:27
+msgid "Please choose a background image!"
+msgstr "請選擇背景圖片！"
+
+#: src/View/Gtk/Theme.cpp:28
+msgid "_Font"
+msgstr "字型(_F)"
+
+#: src/View/Gtk/Theme.cpp:30
+msgid "choose theme file"
+msgstr "選擇佈景主題檔"
+
+#: src/View/Gtk/Theme.cpp:31
+msgid "Theme contents"
+msgstr "佈景主題內容"
+
+#: src/View/Gtk/Theme.cpp:31
+msgid "Custom Theme settings"
+msgstr "自訂佈景主題設定"
+
+#: src/View/Gtk/Theme.cpp:32
+msgid "Normal: Font"
+msgstr "正常：字型"
+
+#: src/View/Gtk/Theme.cpp:33
+msgid "Normal: Background"
+msgstr "正常：背景"
+
+#: src/View/Gtk/Theme.cpp:34
+msgid "Highlighted: Font"
+msgstr "突顯項目：字型"
+
+#: src/View/Gtk/Theme.cpp:35
+msgid "Highlighted: Background"
+msgstr "突顯項目：背景"
+
+#: src/View/Gtk/Theme.cpp:106
+msgid "File"
+msgstr "檔案"
+
+#: src/View/Gtk/Theme.cpp:117
+msgid "add theme"
+msgstr "加入佈景主題"
+
+#: src/View/Gtk/Theme.cpp:118
+msgid "delete this theme"
+msgstr "刪除此佈景主題"
+
+#: src/View/Gtk/Theme.cpp:130
+msgid "Archive files"
+msgstr "封存檔"
+
+#: src/View/Gtk/Theme.cpp:135
+msgid "All files"
+msgstr "全部檔案"
+
+#: src/View/Gtk/Theme.cpp:179
+msgid "remove font"
+msgstr "移除字型"
+
+#: src/View/Gtk/Theme.cpp:198
+msgid "remove background"
+msgstr "移除背景"
+
+#: src/View/Gtk/Theme.cpp:294
+msgid "white"
+msgstr "白色"
+
+#: src/View/Gtk/Theme.cpp:295
+msgid "yellow"
+msgstr "黃色"
+
+#: src/View/Gtk/Theme.cpp:296
+msgid "light-cyan"
+msgstr "淺青色"
+
+#: src/View/Gtk/Theme.cpp:297
+msgid "cyan"
+msgstr "青色"
+
+#: src/View/Gtk/Theme.cpp:298
+msgid "light-blue"
+msgstr "淡藍色"
+
+#: src/View/Gtk/Theme.cpp:299
+msgid "blue"
+msgstr "藍色"
+
+#: src/View/Gtk/Theme.cpp:300
+msgid "light-green"
+msgstr "淺綠色"
+
+#: src/View/Gtk/Theme.cpp:301
+msgid "green"
+msgstr "綠色"
+
+#: src/View/Gtk/Theme.cpp:302
+msgid "light-magenta"
+msgstr "淺洋紅色"
+
+#: src/View/Gtk/Theme.cpp:303
+msgid "magenta"
+msgstr "洋紅色"
+
+#: src/View/Gtk/Theme.cpp:304
+msgid "light-red"
+msgstr "淺紅色"
+
+#: src/View/Gtk/Theme.cpp:305
+msgid "red"
+msgstr "紅色"
+
+#: src/View/Gtk/Theme.cpp:306
+msgid "brown"
+msgstr "棕色"
+
+#: src/View/Gtk/Theme.cpp:307
+msgid "light-gray"
+msgstr "淺灰色"
+
+#: src/View/Gtk/Theme.cpp:308
+msgid "dark-gray"
+msgstr "深灰色"
+
+#: src/View/Gtk/Theme.cpp:309
+msgid "transparent"
+msgstr "透明"
+
+#: src/View/Gtk/Theme.cpp:309
+msgid "black"
+msgstr "黑色"
+
+#: src/View/Gtk/Theme.cpp:385
+msgid "(Custom Settings)"
+msgstr "(自訂設定)"
+
+#: src/View/Gtk/Theme.cpp:432
+msgid "The chosen file cannot be loaded as theme"
+msgstr "所選檔案不能以佈景主題方式載入"
+
+#: src/View/Gtk/Theme.cpp:435
+msgid "The given filename cannot be used"
+msgstr "不能使用給定的檔案名稱"
+
+#: src/View/Gtk/Theme.cpp:438
+msgid ""
+"This theme doesn't contain a theme.txt. Please look for the config file and "
+"rename it to \"theme.txt\"!"
+msgstr "此佈景主題未包含 theme.txt。請尋找設定檔並將之改名為「theme.txt」！"
+
+#: src/View/Gtk/Theme.cpp:441
+msgid "Saving of themes didn't succeed completely!"
+msgstr "未完全成功儲存佈景主題！"
+
+#: src/View/Gtk/Theme.cpp:444
+msgid "File replacement failed. Please select a theme file first!"
+msgstr "未能置換檔案。請先選取佈景主題檔！"
+
+#: src/View/Gtk/Theme.cpp:463
+msgid "filename"
+msgstr "檔案名稱"
+
+#: src/View/Gtk/Theme.cpp:495
+msgid ""
+"please note: large fonts on low boot screen resolutions can corrupt the boot "
+"screen\n"
+"Because this problem depends on chosen font, it isn't possible to define a "
+"general maximum. When you're trying to select a larger font, please do it in "
+"small steps (rebooting and checking the results).\n"
+"The problem occurs when the grub gui elements (borders, description) wont "
+"fit into screen. So while there's enough vertical space you can try a larger "
+"font. The mass of menuentries is not a problem - they are scrolled if "
+"required.\n"
+"\n"
+"The corruption results in a endless loading time of grub2. You need a live "
+"cd to fix this:\n"
+" * delete the font from (MOUNT)/boot/grub/unicode.pf2\n"
+" * reboot your system (menu should show up with default fonts)\n"
+" * open /etc/default/grub with root permissions and place a '#' in front of "
+"the line containing GRUB_FONT\n"
+" * then run grub customizer to choose the font used before"
+msgstr ""
+
+#: src/View/Gtk/Theme.cpp:507
+msgid "Grub fonts can be harmful (Info)"
+msgstr ""
+
+#: src/View/Gtk/Theme.cpp:703
+msgid "Are you sure you want to remove this theme"
+msgstr ""
+
+#: src/View/Gtk/Theme.cpp:771
+msgid ""
+"Alternatively to the simple theme method which provides some options like "
+"color, wallpaper and font you can install complex theme packages to get an "
+"even better looking boot menu.\n"
+"\n"
+"There are several download sources like this thread at ubuntuforums.org:\n"
+"<a href='%1'>%1</a> (needs account)\n"
+"or search for '%2' at <a href='%3'>%3</a>\n"
+"\n"
+"Just download such a package (which is in tar.gz format in most cases) and "
+"add it to the list of available themes by using the add button next to the "
+"theme chooser.\n"
+"\n"
+"After changing the theme you'll see a simple editor which gives a preview of "
+"images and allows some file management. Modified theme contents will be "
+"saved when you're pressing the save button."
+msgstr ""
+
+#: src/View/Gtk/Trash.cpp:28
+msgid "Add entry from trash"
+msgstr "從回收筒加入項目"
+
+#: src/View/Gtk/Trash.cpp:32
+msgid "Removed items"
+msgstr "已移除項目"
+
+#: src/View/Gtk/Trash.cpp:42
+msgid "_Restore"
+msgstr "還原(_R)"
+
+#: src/View/Gtk/Trash.cpp:44
+msgid "Restore selected entries"
+msgstr "還原所選項目"
+
+#: src/View/Gtk/Trash.cpp:49
+msgid "permanently delete selected entries"
+msgstr "永久刪除所選項目"
+
+#: src/View/Gtk/Trash.cpp:57
+msgid ""
+"delete entries permanently - this action is available on custom entries only"
+msgstr "永久刪除所選項目 - 此動作只在自訂項目提供"
+
+#: src/View/Gtk/Trash.cpp:122
+msgid "This deletes the following entries:"
+msgstr "這會刪除以下項目："
+
+#: src/View/Gtk/Element/List.h:131
+msgid "script: "
+msgstr "腳本： "
+
+#: src/View/Gtk/Element/List.h:135
+msgid "default name: "
+msgstr "預設名稱： "
+
+#: src/View/Gtk/Element/List.h:139
+msgid "Partition: "
+msgstr "分割區： "
