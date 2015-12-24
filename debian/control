@@ -1,7 +1,7 @@
 Source: grub-customizer
 Section: admin
 Priority: optional
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Maintainer: SteamOS-Tools Signing Key <mdeguzis@gmail.com>
 XSBC-Original-Maintainer: Daniel Richter <danielrichter2007@web.de>
 Build-Depends: debhelper (>= 7.3), libgtkmm-3.0-dev (>= 2.20.0), libssl-dev, cmake (>=2.6.2), gettext (>=0.17), dpatch, libarchive-dev
 Standards-Version: 3.9.2
